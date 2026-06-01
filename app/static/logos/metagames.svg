@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <defs>
+    <linearGradient id="metagames-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Mark -->
+  <g transform="translate(0, 10)">
+    <!-- M shape stylized -->
+    <path d="M8 38V12l12 16 12-16v26" stroke="url(#metagames-gradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Game controller hint -->
+    <circle cx="20" cy="20" r="2" fill="url(#metagames-gradient)"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="48" y="38" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="white">
+    Meta<tspan fill="url(#metagames-gradient)">Games</tspan>
+  </text>
+</svg>
