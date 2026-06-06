@@ -29,8 +29,12 @@ async def apply_entrepreneur(application: EntrepreneurApplication):
     """
     lang = application.language
     
+    # Calculate contribution amount server-side (don't trust frontend)
+    contribution_amount = application.get_contribution_amount()
+    
     # Convert to dict for logging and Google Sheets
     payload = application.model_dump()
+    payload["contribution_amount"] = contribution_amount
     
     # Log the application
     logger.info("=" * 60)
@@ -41,9 +45,9 @@ async def apply_entrepreneur(application: EntrepreneurApplication):
     logger.info(f"Phone: {application.phone}")
     logger.info(f"Company: {application.company}")
     logger.info(f"Project Idea: {application.project_idea or 'Not provided'}")
-    logger.info(f"Wants to Sponsor: {application.wants_to_sponsor}")
-    if application.wants_to_sponsor and application.sponsor_amount:
-        logger.info(f"Sponsor Amount: {application.sponsor_amount} EUR")
+    logger.info(f"Participation Type: {application.participation_type}")
+    logger.info(f"Contribution Amount: {contribution_amount} EUR")
+    logger.info(f"Consent to Contact: {application.consent_to_contact}")
     logger.info(f"Language: {lang}")
     logger.info("=" * 60)
     
@@ -67,6 +71,9 @@ async def apply_entrepreneur(application: EntrepreneurApplication):
 async def apply_student(application: StudentApplication):
     """
     Handle student application submission.
+    
+    NOTE: Student applications are currently disabled on the landing page,
+    but the endpoint is kept for potential future use.
     
     Validates the application data, logs it, and sends it to Google Sheets.
     """

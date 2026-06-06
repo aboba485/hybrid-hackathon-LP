@@ -13,8 +13,8 @@ class EntrepreneurApplication(BaseModel):
     phone: str
     company: str
     project_idea: Optional[str] = None
-    wants_to_sponsor: bool = False
-    sponsor_amount: Optional[float] = None
+    participation_type: Literal["entrepreneur_250", "patron_500"]
+    consent_to_contact: bool
     language: Literal["en", "ru"] = "en"
 
     @field_validator("full_name")
@@ -38,16 +38,29 @@ class EntrepreneurApplication(BaseModel):
             raise ValueError("Company is required")
         return v.strip()
 
-    @field_validator("sponsor_amount")
+    @field_validator("consent_to_contact")
     @classmethod
-    def validate_sponsor_amount(cls, v: Optional[float]) -> Optional[float]:
-        if v is not None and v < 0:
-            raise ValueError("Sponsor amount must be positive")
+    def validate_consent(cls, v: bool) -> bool:
+        if not v:
+            raise ValueError("Consent to contact is required")
         return v
+
+    def get_contribution_amount(self) -> int:
+        """Calculate contribution amount based on participation type."""
+        if self.participation_type == "entrepreneur_250":
+            return 250
+        elif self.participation_type == "patron_500":
+            return 500
+        return 250
 
 
 class StudentApplication(BaseModel):
-    """Model for student application form."""
+    """
+    Model for student application form.
+    
+    NOTE: Student applications are currently disabled on the landing page,
+    but the endpoint is kept for potential future use.
+    """
     full_name: str
     age_grade: str
     school: str
@@ -94,15 +107,17 @@ class ApplicationResponse(BaseModel):
 # Translation messages for responses
 MESSAGES = {
     "en": {
-        "entrepreneur_success": "Thank you. Your entrepreneur application has been received. We will contact you soon.",
+        "entrepreneur_success": "Thank you. Your application has been received. We will contact you soon.",
         "student_success": "Thank you. Your student application has been received. We will contact you soon.",
         "validation_error": "Please check your form and correct the errors.",
         "submission_error": "Something went wrong while submitting your application. Please try again or contact the organizers.",
+        "consent_required": "You must agree to be contacted to submit the application.",
     },
     "ru": {
-        "entrepreneur_success": "Спасибо. Ваша заявка предпринимателя получена. Мы скоро свяжемся с вами.",
+        "entrepreneur_success": "Спасибо. Ваша заявка получена. Мы скоро свяжемся с вами.",
         "student_success": "Спасибо. Ваша заявка школьника / студента получена. Мы скоро свяжемся с вами.",
         "validation_error": "Пожалуйста, проверьте форму и исправьте ошибки.",
         "submission_error": "Что-то пошло не так при отправке заявки. Пожалуйста, попробуйте еще раз или свяжитесь с организаторами.",
+        "consent_required": "Необходимо согласие на связь для отправки заявки.",
     }
 }

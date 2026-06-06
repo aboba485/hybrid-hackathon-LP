@@ -3,413 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hybrid Hackathon - Where entrepreneurs meet young AI builders. Two days. One real project.">
-    <meta name="theme-color" content="#0a0a0f">
-    <title>Hybrid Hackathon | Early Access Beta</title>
+    <meta name="description" content="Hybrid Lab — A two-day AI-building sprint for entrepreneurs. Build with AI-native talent. Learn AI by doing.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Hybrid Lab | AI Sprint for Entrepreneurs</title>
     
-    <!-- Preconnect to Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-gradient-mesh"></div>
-    
     <!-- Language Switcher -->
     <div class="lang-switcher">
         <button class="lang-btn active" data-lang="en">EN</button>
-        <span class="lang-divider">/</span>
         <button class="lang-btn" data-lang="ru">RU</button>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge" data-i18n="hero_badge">Early Access Beta</div>
-                <div class="hero-date" data-i18n="hero_date">July 6–7</div>
-                <h1 class="hero-title" data-i18n="hero_title">Entrepreneurs meet young AI builders. Two days. One real project.</h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">Hybrid Hackathon brings together 5 entrepreneurs and 15 gifted young builders in math, programming, and AI. Teams form organically, build fast, and present working prototypes to judges.</p>
-                <p class="hero-details" data-i18n="hero_details">July 6–7 · 1.5-day experimental format · Limited access</p>
-                <div class="hero-cta">
-                    <a href="#entrepreneur-form" class="btn btn-primary" data-i18n="entrepreneur_cta">I'm an Entrepreneur</a>
-                    <a href="#student-form" class="btn btn-secondary" data-i18n="student_cta">I'm a Student</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="orbit-container">
-                    <div class="orbit-center">
-                        <span class="orbit-logo">HH</span>
-                    </div>
-                    <div class="orbit orbit-1">
-                        <div class="orbit-item entrepreneur-item" data-i18n="orbit_entrepreneurs">5 Entrepreneurs</div>
-                    </div>
-                    <div class="orbit orbit-2">
-                        <div class="orbit-item student-item" data-i18n="orbit_students">15 Young Builders</div>
-                    </div>
-                </div>
+            <div class="hero-badge" data-i18n="hero_badge">Closed Beta · July 6–7</div>
+            <h1 class="hero-title" data-i18n="hero_title">Build with AI-native talent. Learn AI by doing.</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">A two-day Hybrid Lab sprint for entrepreneurs who want to understand AI through real work — and prototype a project that matters to their business.</p>
+            <p class="hero-meta" data-i18n="hero_meta">5 entrepreneurs · rare teenage talent core · one room · real projects</p>
+            <div class="hero-cta">
+                <a href="#apply" class="btn btn-primary" data-i18n="cta_apply">Apply as an Entrepreneur</a>
+                <a href="#how-it-works" class="btn btn-secondary" data-i18n="cta_how">See how it works</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
         <div class="container">
-            <h2 class="section-title" data-i18n="about_title">A hybrid lab for business ideas and young technical talent</h2>
-            <p class="section-subtitle" data-i18n="about_subtitle">Hybrid Hackathon is a short intensive where entrepreneurs and young technical builders meet, form teams, build prototypes, and present results.</p>
-            
-            <div class="cards-grid">
-                <div class="card glass-card">
-                    <div class="card-icon">🤝</div>
-                    <h3 class="card-title" data-i18n="about_card1_title">Meet</h3>
-                    <p class="card-text" data-i18n="about_card1_text">Entrepreneurs and young builders meet, pitch themselves, and explore possible collaborations.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-icon">🎯</div>
-                    <h3 class="card-title" data-i18n="about_card2_title">Choose</h3>
-                    <p class="card-text" data-i18n="about_card2_text">Teams form naturally: students choose ideas, entrepreneurs choose builders.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title" data-i18n="about_card3_title">Build</h3>
-                    <p class="card-text" data-i18n="about_card3_text">Teams spend 1.5 days turning ideas into prototypes, demos, or validated concepts.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-icon">🏆</div>
-                    <h3 class="card-title" data-i18n="about_card4_title">Present</h3>
-                    <p class="card-text" data-i18n="about_card4_text">Final projects are presented to judges, mentors, and the community.</p>
-                </div>
+            <p class="partners-label" data-i18n="partners_label">Partners & Supporters</p>
+            <div class="partners-logos">
+                <img src="/static/logos/dodo-pizza.svg" alt="Dodo Pizza" class="partner-logo">
+                <img src="/static/logos/metagames.svg" alt="MetaGames" class="partner-logo">
+                <img src="/static/logos/hybrid-lab.svg" alt="Hybrid Lab" class="partner-logo">
             </div>
         </div>
     </section>
 
-    <!-- Participants Section -->
-    <section class="section participants" id="participants">
+    <!-- Values Section -->
+    <section class="section" id="values">
         <div class="container">
-            <h2 class="section-title" data-i18n="participants_title">Participants</h2>
+            <h2 class="section-title" data-i18n="values_title">What Entrepreneurs Get</h2>
             
-            <div class="participants-grid">
-                <!-- Students Column -->
-                <div class="participant-card glass-card">
-                    <div class="participant-icon">🧠</div>
-                    <h3 class="participant-heading" data-i18n="students_heading">For gifted students</h3>
-                    <p class="participant-desc" data-i18n="students_desc">We are looking for unusually strong young builders: students with high IQ, olympiad background, programming experience, AI curiosity, or the kind of technical intuition that usually appears much later.</p>
-                    
-                    <div class="participant-tags">
-                        <span class="tag" data-i18n="tag_iq">high IQ</span>
-                        <span class="tag" data-i18n="tag_olympiads">olympiads</span>
-                        <span class="tag" data-i18n="tag_ims">IMS / advanced math</span>
-                        <span class="tag" data-i18n="tag_coding">coding projects</span>
-                        <span class="tag" data-i18n="tag_ai">AI experiments</span>
-                        <span class="tag" data-i18n="tag_learning">fast learning</span>
-                    </div>
-                    
-                    <h4 class="benefits-title" data-i18n="benefits_title">Benefits</h4>
-                    <ul class="benefits-list">
-                        <li data-i18n="student_benefit1">Work on a real business problem</li>
-                        <li data-i18n="student_benefit2">Join a strong team</li>
-                        <li data-i18n="student_benefit3">Build a prototype fast</li>
-                        <li data-i18n="student_benefit4">Meet entrepreneurs and mentors</li>
-                        <li data-i18n="student_benefit5">Compete for the prize fund</li>
-                        <li data-i18n="student_benefit6">Get a serious portfolio project</li>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-number" data-i18n="value1_number">Value 01</div>
+                    <h3 class="value-title" data-i18n="value1_title">X10 AI Literacy</h3>
+                    <p class="value-text" data-i18n="value1_text">In two days, you may move through a learning curve that would normally take months. Not through lectures, but by working side by side with AI-native builders who search, code, prototype, and iterate with AI as a natural medium.</p>
+                    <ul class="value-list">
+                        <li data-i18n="value1_bullet1">Learn by watching real AI workflows</li>
+                        <li data-i18n="value1_bullet2">Cross practical thresholds in prompting, research, coding, and prototyping</li>
+                        <li data-i18n="value1_bullet3">Understand what AI can actually do for your business</li>
+                        <li data-i18n="value1_bullet4">Leave with sharper instincts, not just notes</li>
                     </ul>
-                    
-                    <a href="#student-form" class="btn btn-secondary btn-block" data-i18n="student_cta">I'm a Student</a>
                 </div>
                 
-                <!-- Entrepreneurs Column -->
-                <div class="participant-card glass-card">
-                    <div class="participant-icon">💼</div>
-                    <h3 class="participant-heading" data-i18n="entrepreneurs_heading">For entrepreneurs</h3>
-                    <p class="participant-desc" data-i18n="entrepreneurs_desc">Entrepreneurs come with real ideas, problems, or opportunities. The goal is not to buy a guaranteed product, but to enter a high-energy experimental environment where young builders can surprise you.</p>
-                    
-                    <h4 class="benefits-title" data-i18n="benefits_title">Benefits</h4>
-                    <ul class="benefits-list">
-                        <li data-i18n="entrepreneur_benefit1">Access to young technical talent</li>
-                        <li data-i18n="entrepreneur_benefit2">1.5-day sprint around your idea</li>
-                        <li data-i18n="entrepreneur_benefit3">Possibility to test a concept quickly</li>
-                        <li data-i18n="entrepreneur_benefit4">Fresh thinking from strong students</li>
-                        <li data-i18n="entrepreneur_benefit5">Chance to identify future interns or collaborators</li>
-                        <li data-i18n="entrepreneur_benefit6">Participation in a curated experimental format</li>
+                <div class="value-card">
+                    <div class="value-number" data-i18n="value2_number">Value 02</div>
+                    <h3 class="value-title" data-i18n="value2_title">A Meaningful Prototype</h3>
+                    <p class="value-text" data-i18n="value2_text">Bring a real challenge, workflow, opportunity, or product idea. During the sprint, you can form a team and turn it into a prototype, demo, internal tool, or first working version.</p>
+                    <ul class="value-list">
+                        <li data-i18n="value2_bullet1">Prototype around your own business request</li>
+                        <li data-i18n="value2_bullet2">Test an idea quickly</li>
+                        <li data-i18n="value2_bullet3">See how young AI-native builders approach complexity</li>
+                        <li data-i18n="value2_bullet4">Leave with a concrete next step</li>
                     </ul>
-                    
-                    <a href="#entrepreneur-form" class="btn btn-primary btn-block" data-i18n="entrepreneur_cta">I'm an Entrepreneur</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Prize Fund Section -->
-    <section class="section prize-fund" id="prize-fund">
+    <!-- How It Works Section -->
+    <section class="section" id="how-it-works">
         <div class="container">
-            <h2 class="section-title" data-i18n="prize_title">Prize fund grows with entrepreneur participation</h2>
-            <p class="section-subtitle" data-i18n="prize_subtitle">The prize fund is directly linked to the number of entrepreneur contributions. The more confirmed entrepreneur participants, the larger the final prize pool.</p>
+            <h2 class="section-title" data-i18n="how_title">How The Sprint Works</h2>
             
-            <div class="prize-mechanics">
-                <div class="prize-card glass-card">
-                    <div class="prize-amount">250 €</div>
-                    <div class="prize-label" data-i18n="prize_contribution">Entrepreneur contribution</div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title" data-i18n="step1_title">Bring a challenge</h3>
+                    <p class="step-text" data-i18n="step1_text">Come with a business idea, workflow, pain point, product hypothesis, or innovation question.</p>
                 </div>
-                <div class="prize-card glass-card">
-                    <div class="prize-split">
-                        <div class="split-item">
-                            <span class="split-percent">80%</span>
-                            <span class="split-label" data-i18n="prize_fund_label">Prize fund</span>
-                        </div>
-                        <div class="split-divider"></div>
-                        <div class="split-item">
-                            <span class="split-percent">20%</span>
-                            <span class="split-label" data-i18n="prize_food_label">Food & event costs</span>
-                        </div>
-                    </div>
+                
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title" data-i18n="step2_title">Meet the talent core</h3>
+                    <p class="step-text" data-i18n="step2_text">Entrepreneurs and young builders meet, discuss possible directions, and choose who they want to work with.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title" data-i18n="step3_title">Build in public</h3>
+                    <p class="step-text" data-i18n="step3_text">Teams work in the same physical space, using AI, code, research, and fast prototyping.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title" data-i18n="step4_title">Present to judges</h3>
+                    <p class="step-text" data-i18n="step4_text">Final projects are presented and the winning team receives the prize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talent Core Section -->
+    <section class="section" id="talent">
+        <div class="container">
+            <h2 class="section-title" data-i18n="talent_title">The Talent Core</h2>
+            <p class="talent-intro" data-i18n="talent_intro">At the center of the sprint is a small circle of AI-native teenagers with unusual technical range. This is a collective portrait of the group — not a claim that every participant has every achievement.</p>
+            
+            <div class="talent-grid">
+                <div class="talent-item" data-i18n="talent1">Students from IMS, one of the strongest mathematics schools in Cyprus</div>
+                <div class="talent-item" data-i18n="talent2">Several teenagers with IQ levels found in roughly 0.05% of the population</div>
+                <div class="talent-item" data-i18n="talent3">Best Computer Science result in Europe at IGCSE level</div>
+                <div class="talent-item" data-i18n="talent4">Winners of Cyprus mathematics olympiads</div>
+                <div class="talent-item" data-i18n="talent5">Successful commercial software development experience</div>
+                <div class="talent-item" data-i18n="talent6">Designed and 3D-printed a robotic arm prototype for chemical experiments with computer vision</div>
+                <div class="talent-item" data-i18n="talent7">Optimized workflows for businesses and business owners</div>
+                <div class="talent-item" data-i18n="talent8">Practical fluency with AI tools, coding, fast research, and prototyping</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Can Build Section -->
+    <section class="section" id="build">
+        <div class="container">
+            <h2 class="section-title" data-i18n="build_title">What Could Be Prototyped</h2>
+            
+            <div class="build-grid">
+                <span class="build-tag" data-i18n="build1">AI assistant for internal operations</span>
+                <span class="build-tag" data-i18n="build2">Workflow automation</span>
+                <span class="build-tag" data-i18n="build3">Customer support or sales assistant</span>
+                <span class="build-tag" data-i18n="build4">Analytics dashboard</span>
+                <span class="build-tag" data-i18n="build5">Document processing tool</span>
+                <span class="build-tag" data-i18n="build6">Educational or training product</span>
+                <span class="build-tag" data-i18n="build7">Computer vision prototype</span>
+                <span class="build-tag" data-i18n="build8">Internal knowledge base</span>
+                <span class="build-tag" data-i18n="build9">MVP for a new product idea</span>
+            </div>
+            
+            <p class="build-note" data-i18n="build_note">The best projects are not abstract. They start from a real business tension.</p>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="section disclaimer" id="disclaimer">
+        <div class="container">
+            <h2 class="section-title" data-i18n="disclaimer_title">No Fake Guarantees. Real Conditions for Acceleration.</h2>
+            <p class="disclaimer-content" data-i18n="disclaimer_text">Hybrid Hackathon does not guarantee a finished product. The default recommendation is to form projects around entrepreneurs' real requests, but teams are formed organically: entrepreneurs and young builders choose each other after meeting, discussing ideas, and sensing where the strongest collaboration can happen.</p>
+        </div>
+    </section>
+
+    <!-- Contribution Section -->
+    <section class="section" id="contribution">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contribution_title">Contribution Model</h2>
+            
+            <div class="contribution-grid">
+                <div class="contribution-card">
+                    <div class="contribution-type" data-i18n="contribution_entrepreneur">Entrepreneur</div>
+                    <div class="contribution-amount">250 <span class="contribution-currency">€</span></div>
+                </div>
+                
+                <div class="contribution-card featured">
+                    <div class="contribution-type" data-i18n="contribution_patron">Patron</div>
+                    <div class="contribution-amount">500 <span class="contribution-currency">€</span></div>
                 </div>
             </div>
             
-            <div class="prize-example glass-card">
-                <h3 data-i18n="prize_example_title">With 5 entrepreneurs:</h3>
-                <div class="prize-calculation">
-                    <div class="calc-row">
-                        <span>5 × 250 € = 1,250 €</span>
-                    </div>
-                    <div class="calc-row highlight">
-                        <span data-i18n="prize_fund_result">≈ 1,000 € prize fund</span>
-                    </div>
-                    <div class="calc-row">
-                        <span data-i18n="prize_food_result">≈ 250 € food & event support</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="prize-scale">
-                <h3 class="scale-title" data-i18n="prize_scale_title">Prize fund scale</h3>
-                <div class="scale-bars">
-                    <div class="scale-bar" style="--bar-width: 20%;">
-                        <div class="bar-fill"></div>
-                        <div class="bar-label">
-                            <span class="bar-entrepreneurs">1</span>
-                            <span class="bar-amount">200 €</span>
-                        </div>
-                    </div>
-                    <div class="scale-bar" style="--bar-width: 40%;">
-                        <div class="bar-fill"></div>
-                        <div class="bar-label">
-                            <span class="bar-entrepreneurs">2</span>
-                            <span class="bar-amount">400 €</span>
-                        </div>
-                    </div>
-                    <div class="scale-bar" style="--bar-width: 60%;">
-                        <div class="bar-fill"></div>
-                        <div class="bar-label">
-                            <span class="bar-entrepreneurs">3</span>
-                            <span class="bar-amount">600 €</span>
-                        </div>
-                    </div>
-                    <div class="scale-bar" style="--bar-width: 80%;">
-                        <div class="bar-fill"></div>
-                        <div class="bar-label">
-                            <span class="bar-entrepreneurs">4</span>
-                            <span class="bar-amount">800 €</span>
-                        </div>
-                    </div>
-                    <div class="scale-bar" style="--bar-width: 100%;">
-                        <div class="bar-fill"></div>
-                        <div class="bar-label">
-                            <span class="bar-entrepreneurs">5</span>
-                            <span class="bar-amount">1,000 €</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="contribution-note" data-i18n="contribution_note">100% of contributions go into prizes, venue, and food. The winning team receives the prize. Patrons help increase the quality of the event and the final prize pool.</p>
         </div>
     </section>
 
     <!-- Jury Section -->
-    <section class="section jury" id="jury">
+    <section class="section" id="jury">
         <div class="container">
-            <h2 class="section-title" data-i18n="jury_title">Jury</h2>
-            <p class="section-subtitle" data-i18n="jury_subtitle">Judges will be announced soon.</p>
-            <p class="jury-note" data-i18n="jury_note">Final projects will be evaluated by entrepreneurs, product thinkers, and technology experts.</p>
-            
-            <div class="jury-grid">
-                <div class="jury-card glass-card">
-                    <div class="jury-avatar">?</div>
-                    <div class="jury-name" data-i18n="jury_placeholder1">Judge #1</div>
-                    <div class="jury-status" data-i18n="jury_coming_soon">Coming soon</div>
-                </div>
-                <div class="jury-card glass-card">
-                    <div class="jury-avatar">?</div>
-                    <div class="jury-name" data-i18n="jury_placeholder2">Judge #2</div>
-                    <div class="jury-status" data-i18n="jury_coming_soon">Coming soon</div>
-                </div>
-                <div class="jury-card glass-card">
-                    <div class="jury-avatar">?</div>
-                    <div class="jury-name" data-i18n="jury_placeholder3">Judge #3</div>
-                    <div class="jury-status" data-i18n="jury_coming_soon">Coming soon</div>
-                </div>
+            <h2 class="section-title" data-i18n="jury_title">Jury & Mentors</h2>
+            <div class="jury-placeholder">
+                <p class="jury-placeholder-text" data-i18n="jury_placeholder">To be announced soon</p>
             </div>
         </div>
     </section>
 
-    <!-- Mentors Section -->
-    <section class="section mentors" id="mentors">
+    <!-- Application Form Section -->
+    <section class="section form-section" id="apply">
         <div class="container">
-            <h2 class="section-title" data-i18n="mentors_title">Mentors & experts</h2>
-            <p class="section-subtitle" data-i18n="mentors_subtitle">Mentors and experts will help teams sharpen ideas, validate assumptions, and prepare final presentations.</p>
-            
-            <div class="mentors-placeholder glass-card">
-                <div class="mentors-icon">👥</div>
-                <p data-i18n="mentors_placeholder">Mentor lineup coming soon</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Entrepreneur Form Section -->
-    <section class="section form-section" id="entrepreneur-form">
-        <div class="container">
-            <div class="form-wrapper glass-card">
-                <h2 class="form-title" data-i18n="entrepreneur_form_title">Apply as an Entrepreneur</h2>
-                <div class="form-contribution">
-                    <span class="contribution-label" data-i18n="form_contribution_label">Participation contribution:</span>
-                    <span class="contribution-amount">250 €</span>
-                </div>
-                <p class="form-desc" data-i18n="entrepreneur_form_desc">This contribution supports the prize fund, food, and basic event costs. Sponsors may optionally contribute more.</p>
+            <div class="form-wrapper">
+                <h2 class="form-title" data-i18n="form_title">Apply as an Entrepreneur</h2>
                 
                 <form id="entrepreneur-application-form" class="application-form" novalidate>
-                    <input type="hidden" name="language" id="entrepreneur-language" value="en">
+                    <input type="hidden" name="language" id="form-language" value="en">
                     
                     <div class="form-group">
-                        <label for="ent-name" data-i18n="form_full_name">Full name</label>
-                        <input type="text" id="ent-name" name="full_name" required data-i18n-placeholder="form_full_name_placeholder">
+                        <label for="full-name" data-i18n="form_name_label">Full Name</label>
+                        <input type="text" id="full-name" name="full_name" required data-i18n-placeholder="form_name_placeholder">
                         <span class="error-message" data-i18n="error_required">This field is required</span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="ent-email" data-i18n="form_email">Email</label>
-                        <input type="email" id="ent-email" name="email" required data-i18n-placeholder="form_email_placeholder">
+                        <label for="email" data-i18n="form_email_label">Email</label>
+                        <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_placeholder">
                         <span class="error-message" data-i18n="error_email">Please enter a valid email</span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="ent-phone" data-i18n="form_phone">Phone</label>
-                        <input type="tel" id="ent-phone" name="phone" required data-i18n-placeholder="form_phone_placeholder">
+                        <label for="phone" data-i18n="form_phone_label">Phone</label>
+                        <input type="tel" id="phone" name="phone" required data-i18n-placeholder="form_phone_placeholder">
                         <span class="error-message" data-i18n="error_required">This field is required</span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="ent-company" data-i18n="form_company">Company / project</label>
-                        <input type="text" id="ent-company" name="company" required data-i18n-placeholder="form_company_placeholder">
+                        <label for="company" data-i18n="form_company_label">Company / Project</label>
+                        <input type="text" id="company" name="company" required data-i18n-placeholder="form_company_placeholder">
                         <span class="error-message" data-i18n="error_required">This field is required</span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="ent-idea" data-i18n="form_idea">Short description of idea or business challenge</label>
-                        <textarea id="ent-idea" name="project_idea" rows="3" data-i18n-placeholder="form_idea_placeholder"></textarea>
+                        <label for="project-idea" data-i18n="form_idea_label">What challenge, workflow, or idea would you like to explore?</label>
+                        <textarea id="project-idea" name="project_idea" rows="4" data-i18n-placeholder="form_idea_placeholder"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-i18n="form_participation_label">Participation Type</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="participation_type" value="entrepreneur_250" checked>
+                                <span class="radio-mark"></span>
+                                <span class="radio-text" data-i18n="form_type_entrepreneur">Entrepreneur</span>
+                                <span class="radio-amount">250 €</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="participation_type" value="patron_500">
+                                <span class="radio-mark"></span>
+                                <span class="radio-text" data-i18n="form_type_patron">Patron</span>
+                                <span class="radio-amount">500 €</span>
+                            </label>
+                        </div>
                     </div>
                     
                     <div class="form-group checkbox-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" id="ent-sponsor" name="wants_to_sponsor">
+                            <input type="checkbox" id="consent" name="consent_to_contact" required>
                             <span class="checkmark"></span>
-                            <span data-i18n="form_sponsor_checkbox">I want to become a sponsor</span>
+                            <span class="checkbox-text" data-i18n="form_consent">I agree to be contacted about Hybrid Hackathon.</span>
                         </label>
-                    </div>
-                    
-                    <div class="form-group sponsor-amount-group" id="sponsor-amount-wrapper" style="display: none;">
-                        <label for="ent-sponsor-amount" data-i18n="form_sponsor_amount">Additional sponsor contribution (€)</label>
-                        <input type="number" id="ent-sponsor-amount" name="sponsor_amount" min="0" step="50" data-i18n-placeholder="form_sponsor_amount_placeholder">
+                        <span class="error-message consent-error" data-i18n="error_consent">You must agree to be contacted</span>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block btn-submit">
-                        <span data-i18n="entrepreneur_submit_btn">Apply as Entrepreneur</span>
+                        <span data-i18n="form_submit">Apply</span>
                         <span class="btn-loader"></span>
                     </button>
                     
                     <div class="form-message success-message" style="display: none;">
                         <span class="message-icon">✓</span>
-                        <span class="message-text" data-i18n="entrepreneur_success"></span>
-                    </div>
-                    
-                    <div class="form-message error-message-box" style="display: none;">
-                        <span class="message-icon">✕</span>
-                        <span class="message-text"></span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Student Form Section -->
-    <section class="section form-section" id="student-form">
-        <div class="container">
-            <div class="form-wrapper glass-card">
-                <h2 class="form-title" data-i18n="student_form_title">Apply as a Student</h2>
-                
-                <form id="student-application-form" class="application-form" novalidate>
-                    <input type="hidden" name="language" id="student-language" value="en">
-                    
-                    <div class="form-group">
-                        <label for="stu-name" data-i18n="form_full_name">Full name</label>
-                        <input type="text" id="stu-name" name="full_name" required data-i18n-placeholder="form_full_name_placeholder">
-                        <span class="error-message" data-i18n="error_required">This field is required</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="stu-age" data-i18n="form_age_grade">Age / grade</label>
-                        <input type="text" id="stu-age" name="age_grade" required data-i18n-placeholder="form_age_grade_placeholder">
-                        <span class="error-message" data-i18n="error_required">This field is required</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="stu-school" data-i18n="form_school">School / university</label>
-                        <input type="text" id="stu-school" name="school" required data-i18n-placeholder="form_school_placeholder">
-                        <span class="error-message" data-i18n="error_required">This field is required</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="stu-email" data-i18n="form_email">Email</label>
-                        <input type="email" id="stu-email" name="email" required data-i18n-placeholder="form_email_placeholder">
-                        <span class="error-message" data-i18n="error_email">Please enter a valid email</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label data-i18n="form_strengths">Strong sides</label>
-                        <div class="checkbox-group-inline">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="strengths" value="Mathematics">
-                                <span class="checkmark"></span>
-                                <span data-i18n="strength_math">Mathematics</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="strengths" value="AI">
-                                <span class="checkmark"></span>
-                                <span data-i18n="strength_ai">AI</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="strengths" value="Programming">
-                                <span class="checkmark"></span>
-                                <span data-i18n="strength_programming">Programming</span>
-                            </label>
-                        </div>
-                        <span class="error-message strengths-error" data-i18n="error_strengths">Please select at least one strength</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="stu-background" data-i18n="form_background">Tell us briefly what you have built, studied, or competed in</label>
-                        <textarea id="stu-background" name="background" rows="3" data-i18n-placeholder="form_background_placeholder"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-secondary btn-block btn-submit">
-                        <span data-i18n="student_submit_btn">Apply as Student</span>
-                        <span class="btn-loader"></span>
-                    </button>
-                    
-                    <div class="form-message success-message" style="display: none;">
-                        <span class="message-icon">✓</span>
-                        <span class="message-text" data-i18n="student_success"></span>
+                        <span class="message-text" data-i18n="form_success"></span>
                     </div>
                     
                     <div class="form-message error-message-box" style="display: none;">
@@ -422,25 +278,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
-            <div class="footer-logos">
-                <a href="#" class="footer-logo" aria-label="MetaGames">
-                    <img src="/static/logos/metagames.svg" alt="MetaGames" width="120" height="40">
-                </a>
-                <a href="#" class="footer-logo" aria-label="Hybrid Hub">
-                    <img src="/static/logos/hybrid-hub.svg" alt="Hybrid Hub" width="120" height="40">
-                </a>
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <img src="/static/logos/dodo-pizza.svg" alt="Dodo Pizza" class="footer-logo">
+                    <img src="/static/logos/metagames.svg" alt="MetaGames" class="footer-logo">
+                    <img src="/static/logos/hybrid-lab.svg" alt="Hybrid Lab" class="footer-logo">
+                </div>
+                <p class="footer-text">
+                    <span data-i18n="footer_text">Hybrid Lab · July 6–7</span>
+                    <span class="footer-beta">BETA</span>
+                </p>
             </div>
-            <p class="footer-text" data-i18n="footer_text">Hybrid Hackathon · July 6–7 · Early Access Beta</p>
         </div>
     </footer>
-
-    <!-- Mobile CTA Bar -->
-    <div class="mobile-cta-bar" id="mobile-cta">
-        <a href="#entrepreneur-form" class="mobile-cta-btn primary" data-i18n="mobile_entrepreneur">Entrepreneur</a>
-        <a href="#student-form" class="mobile-cta-btn secondary" data-i18n="mobile_student">Student</a>
-    </div>
 
     <!-- Scripts -->
     <script src="/static/js/i18n.js"></script>
