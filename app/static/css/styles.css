@@ -361,15 +361,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .partner-logo {
-    max-height: 40px;
+    max-height: 64px;
     width: auto;
-    opacity: 0.7;
-    filter: grayscale(100%) brightness(2);
     transition: var(--transition-base);
 }
 
 .partner-logo:hover {
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* --------------------------------------------------------------------------
@@ -873,15 +871,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    max-height: 32px;
+    max-height: 48px;
     width: auto;
-    opacity: 0.5;
-    filter: grayscale(100%) brightness(2);
+    opacity: 0.8;
     transition: var(--transition-base);
 }
 
 .footer-logo:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .footer-text {
@@ -963,7 +960,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .partner-logo {
-        max-height: 32px;
+        max-height: 48px;
     }
     
     .lang-switcher {
