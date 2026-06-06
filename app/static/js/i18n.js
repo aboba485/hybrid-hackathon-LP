@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
     en: {
         // Hero Section
-        hero_badge: "Closed Beta · July 6–7",
+        hero_badge: "Closed Beta · July 11–12",
         hero_title: "Build with AI-native talent. Learn AI by doing.",
         hero_subtitle: "A two-day Hybrid Lab sprint for entrepreneurs who want to understand AI through real work — and prototype a project that matters to their business.",
         hero_meta: "5 entrepreneurs · rare teenage talent core · one room · real projects",
@@ -109,12 +109,12 @@ const TRANSLATIONS = {
         error_generic: "Something went wrong. Please try again.",
 
         // Footer
-        footer_text: "Hybrid Lab · July 6–7"
+        footer_text: "Hybrid Lab · July 11–12"
     },
 
     ru: {
         // Hero Section
-        hero_badge: "Closed Beta · 6–7 июля",
+        hero_badge: "Closed Beta · 11–12 июля",
         hero_title: "Соберите проект с AI-native талантами. Научитесь ИИ через действие.",
         hero_subtitle: "Двухдневный Hybrid Lab sprint для предпринимателей, которые хотят понять ИИ через реальную работу — и собрать прототип проекта, важного для своего бизнеса.",
         hero_meta: "5 предпринимателей · редкое ядро подростков · одна комната · реальные проекты",
@@ -217,7 +217,7 @@ const TRANSLATIONS = {
         error_generic: "Что-то пошло не так. Попробуйте еще раз.",
 
         // Footer
-        footer_text: "Hybrid Lab · 6–7 июля"
+        footer_text: "Hybrid Lab · 11–12 июля"
     }
 };
 
