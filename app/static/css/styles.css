@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Hybrid Lab / Hybrid Hackathon - Brutalist Landing Page
+   Hybrid Lab - Brutalist Landing Page
    Swiss / Lab / Editorial aesthetic - Black, White, Grayscale
    ========================================================================== */
 
@@ -48,7 +48,7 @@
     --font-size-2xl: clamp(1.25rem, 2.8vw, 1.5rem);
     --font-size-3xl: clamp(1.5rem, 3.5vw, 2rem);
     --font-size-4xl: clamp(2rem, 5vw, 3rem);
-    --font-size-hero: clamp(2.5rem, 8vw, 5rem);
+    --font-size-hero: clamp(2.25rem, 7vw, 4.5rem);
     
     /* Spacing */
     --space-xs: clamp(0.25rem, 0.8vw, 0.5rem);
@@ -65,7 +65,7 @@
     --border-medium: 2px solid var(--color-border);
     
     /* Container */
-    --container-max: 1200px;
+    --container-max: 1100px;
     --container-narrow: 800px;
     --container-padding: clamp(20px, 5vw, 48px);
     
@@ -119,18 +119,22 @@ body {
     margin-inline: auto;
 }
 
-.container-narrow {
-    width: min(var(--container-narrow), calc(100% - var(--container-padding) * 2));
-    margin-inline: auto;
-}
-
 .section {
     padding-block: var(--space-3xl);
     border-bottom: var(--border-thin);
 }
 
-.section:last-of-type {
-    border-bottom: none;
+.section-alt {
+    background: var(--color-bg-elevated);
+}
+
+.section-number {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-md);
 }
 
 /* --------------------------------------------------------------------------
@@ -172,32 +176,55 @@ body {
     color: var(--color-black);
 }
 
-.lang-divider {
-    display: none;
-}
-
 /* --------------------------------------------------------------------------
    Typography
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 1.15;
     letter-spacing: -0.03em;
 }
 
 .section-title {
     font-size: var(--font-size-3xl);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: var(--space-lg);
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
+    max-width: 20ch;
 }
 
 .section-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    max-width: 700px;
+    line-height: 1.4;
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+}
+
+.section-text {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
     max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.lead-text {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    max-width: 700px;
     line-height: 1.5;
+    margin-bottom: var(--space-lg);
+}
+
+.accent-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    font-weight: 500;
+    max-width: 700px;
+    line-height: 1.5;
+    padding-left: var(--space-lg);
+    border-left: 3px solid var(--color-white);
 }
 
 /* --------------------------------------------------------------------------
@@ -307,10 +334,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: var(--font-size-hero);
-    font-weight: 700;
-    line-height: 0.95;
+    font-weight: 800;
+    line-height: 1.0;
     margin-bottom: var(--space-lg);
-    max-width: 14ch;
+    max-width: 16ch;
     letter-spacing: -0.04em;
 }
 
@@ -334,6 +361,19 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.hero-sticker {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--color-gray-800);
+    border: var(--border-thin);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    transform: rotate(2deg);
+    letter-spacing: 0.02em;
 }
 
 /* --------------------------------------------------------------------------
@@ -350,14 +390,26 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
-.partners-logos {
+.partners-grid {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-xl);
+}
+
+.partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.partner-main {
+    flex-basis: 100%;
+    margin-bottom: var(--space-md);
 }
 
 .partner-logo {
@@ -370,64 +422,81 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
-/* --------------------------------------------------------------------------
-   Values Section
-   -------------------------------------------------------------------------- */
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-lg);
-    margin-top: var(--space-xl);
-}
-
-.value-card {
-    padding: var(--space-xl);
-    border: var(--border-thin);
-    background: var(--color-bg-elevated);
-}
-
-.value-number {
+.partner-desc {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--space-md);
+    letter-spacing: 0.05em;
 }
 
-.value-title {
-    font-size: var(--font-size-2xl);
-    font-weight: 600;
-    margin-bottom: var(--space-md);
-}
-
-.value-text {
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-lg);
-    line-height: 1.6;
-}
-
-.value-list {
+/* --------------------------------------------------------------------------
+   Feature List
+   -------------------------------------------------------------------------- */
+.feature-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
-.value-list li {
+.feature-list li {
     position: relative;
-    padding-left: var(--space-lg);
-    margin-bottom: var(--space-sm);
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
+    padding-left: var(--space-xl);
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    font-weight: 500;
 }
 
-.value-list li::before {
+.feature-list li::before {
     content: '→';
     position: absolute;
     left: 0;
     color: var(--color-text-muted);
+    font-family: var(--font-mono);
 }
 
 /* --------------------------------------------------------------------------
-   How It Works Section
+   Talent Core Section
+   -------------------------------------------------------------------------- */
+.talent-intro {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    max-width: 750px;
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+.talent-clarification {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-xl);
+}
+
+.talent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-sm);
+}
+
+.talent-item {
+    padding: var(--space-md);
+    border: var(--border-thin);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    transition: var(--transition-fast);
+    line-height: 1.5;
+}
+
+.talent-item:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+/* --------------------------------------------------------------------------
+   Steps Grid
    -------------------------------------------------------------------------- */
 .steps-grid {
     display: grid;
@@ -439,7 +508,6 @@ h1, h2, h3, h4, h5, h6 {
 .step-card {
     padding: var(--space-lg);
     border: var(--border-thin);
-    position: relative;
 }
 
 .step-number {
@@ -464,37 +532,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   Talent Core Section
-   -------------------------------------------------------------------------- */
-.talent-intro {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
-    max-width: 700px;
-    margin-bottom: var(--space-xl);
-    line-height: 1.6;
-}
-
-.talent-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-sm);
-}
-
-.talent-item {
-    padding: var(--space-md);
-    border: var(--border-thin);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    transition: var(--transition-fast);
-}
-
-.talent-item:hover {
-    background: var(--color-bg-elevated);
-    color: var(--color-text);
-}
-
-/* --------------------------------------------------------------------------
-   What You Can Build Section
+   Build Tags
    -------------------------------------------------------------------------- */
 .build-grid {
     display: flex;
@@ -526,17 +564,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
-   Disclaimer Section
+   Need List
    -------------------------------------------------------------------------- */
-.disclaimer {
-    background: var(--color-bg-elevated);
+.need-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
-.disclaimer-content {
+.need-list li {
+    position: relative;
+    padding-left: var(--space-xl);
+    padding-block: var(--space-md);
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    border: var(--border-thin);
+    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.need-list li::before {
+    content: '✓';
+    position: absolute;
+    left: var(--space-md);
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Disclaimer
+   -------------------------------------------------------------------------- */
+.disclaimer-text {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 /* --------------------------------------------------------------------------
@@ -544,7 +607,7 @@ h1, h2, h3, h4, h5, h6 {
    -------------------------------------------------------------------------- */
 .contribution-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
@@ -558,7 +621,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contribution-card.featured {
     border-color: var(--color-white);
-    background: var(--color-bg-elevated);
+    background: var(--color-surface);
 }
 
 .contribution-type {
@@ -586,26 +649,73 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
     max-width: 600px;
-    margin-inline: auto;
     line-height: 1.6;
 }
 
 /* --------------------------------------------------------------------------
-   Jury/Mentors Section
+   People Grid (Jury, Mentors, Moderators)
    -------------------------------------------------------------------------- */
-.jury-placeholder {
-    padding: var(--space-2xl);
-    border: var(--border-thin);
-    border-style: dashed;
-    text-align: center;
-    color: var(--color-text-muted);
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
 }
 
-.jury-placeholder-text {
+.people-grid-small {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 700px;
+}
+
+.person-card {
+    text-align: center;
+}
+
+.person-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--space-md);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-border);
+    position: relative;
+}
+
+.person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: var(--transition-base);
+}
+
+.person-photo:hover img {
+    filter: grayscale(0%);
+}
+
+.person-initials {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-gray-800);
+    color: var(--color-text-muted);
     font-family: var(--font-mono);
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+}
+
+.person-name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.person-desc {
     font-size: var(--font-size-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    line-height: 1.4;
 }
 
 /* --------------------------------------------------------------------------
@@ -622,10 +732,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-title {
     font-size: var(--font-size-3xl);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: var(--space-xl);
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
 }
 
 .application-form {
@@ -887,6 +995,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
 .footer-beta {
@@ -894,7 +1005,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 6px;
     background: var(--color-gray-800);
     font-size: 10px;
-    margin-left: var(--space-sm);
     transform: rotate(2deg);
 }
 
@@ -912,7 +1022,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop (1280px+) */
 @media (min-width: 1280px) {
     .hero-title {
-        font-size: clamp(4rem, 7vw, 6rem);
+        font-size: clamp(3.5rem, 6vw, 5rem);
     }
 }
 
@@ -923,11 +1033,11 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: calc(var(--space-3xl) + 60px);
     }
     
-    .values-grid {
-        grid-template-columns: 1fr;
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .steps-grid {
+    .people-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -955,7 +1065,14 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
     
-    .partners-logos {
+    .people-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin-inline: auto;
+    }
+    
+    .partners-grid {
+        flex-direction: column;
         gap: var(--space-lg);
     }
     
@@ -966,6 +1083,11 @@ h1, h2, h3, h4, h5, h6 {
     .lang-switcher {
         top: var(--space-sm);
         right: var(--space-sm);
+    }
+    
+    .feature-list li,
+    .need-list li {
+        font-size: var(--font-size-base);
     }
 }
 
@@ -984,6 +1106,11 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: calc(20px + var(--space-md));
         margin-top: var(--space-xs);
     }
+    
+    .person-photo {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* Small Mobile (360px - 389px) */
@@ -998,6 +1125,11 @@ h1, h2, h3, h4, h5, h6 {
     
     .section-title {
         font-size: var(--font-size-2xl);
+    }
+    
+    .hero-sticker {
+        font-size: 10px;
+        padding: 6px 12px;
     }
 }
 

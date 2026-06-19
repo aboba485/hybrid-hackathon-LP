@@ -6,96 +6,130 @@
 const TRANSLATIONS = {
     en: {
         // Hero Section
-        hero_badge: "Closed Beta · July 11–12",
-        hero_title: "Build with AI-native talent. Learn AI by doing.",
-        hero_subtitle: "A two-day Hybrid Lab sprint for entrepreneurs who want to understand AI through real work — and prototype a project that matters to their business.",
-        hero_meta: "5 entrepreneurs · rare teenage talent core · one room · real projects",
+        hero_badge: "Closed Beta · July 6–7",
+        hero_title: "Build the AI project you were afraid to start",
+        hero_subtitle: "A rare 1.5-day sprint for entrepreneurs and managers to enter turbo mode with AI — and prototype a project that actually matters to their business.",
+        hero_meta: "4–6 entrepreneurs · AI-native teenagers · one room · real projects · 1.5 days and one non-stop building night",
         cta_apply: "Apply as an Entrepreneur",
-        cta_how: "See how it works",
+        cta_how: "How it works",
+        hero_sticker: "AI without the hype. Just work.",
 
         // Partners
-        partners_label: "Partners & Supporters",
+        partners_label: "Partners & Support",
+        dodo_label: "Official provider and sponsor of the project",
 
-        // Values Section
-        values_title: "What Entrepreneurs Get",
-        value1_number: "Value 01",
-        value1_title: "X10 AI Literacy",
-        value1_text: "In two days, you may move through a learning curve that would normally take months. Not through lectures, but by working side by side with AI-native builders who search, code, prototype, and iterate with AI as a natural medium.",
-        value1_bullet1: "Learn by watching real AI workflows",
-        value1_bullet2: "Cross practical thresholds in prompting, research, coding, and prototyping",
-        value1_bullet3: "Understand what AI can actually do for your business",
-        value1_bullet4: "Leave with sharper instincts, not just notes",
-        value2_number: "Value 02",
-        value2_title: "A Meaningful Prototype",
-        value2_text: "Bring a real challenge, workflow, opportunity, or product idea. During the sprint, you can form a team and turn it into a prototype, demo, internal tool, or first working version.",
-        value2_bullet1: "Prototype around your own business request",
-        value2_bullet2: "Test an idea quickly",
-        value2_bullet3: "See how young AI-native builders approach complexity",
-        value2_bullet4: "Leave with a concrete next step",
+        // Core Proposition - Effect of the Monkey
+        core_title: "Turbo learning through imitation and shared work",
+        core_text1: "The fastest way to learn a new mode of work is to be next to people for whom it already feels natural. You will watch, try, argue, assign tasks, fail, refine, and build again — together with teenagers who already live inside AI tools.",
+        core_text2: "This is not a lecture or a webinar. It is physical co-working where entrepreneurial intent meets AI-native speed.",
 
-        // How It Works Section
-        how_title: "How The Sprint Works",
-        step1_title: "Bring a challenge",
-        step1_text: "Come with a business idea, workflow, pain point, product hypothesis, or innovation question.",
-        step2_title: "Meet the talent core",
-        step2_text: "Entrepreneurs and young builders meet, discuss possible directions, and choose who they want to work with.",
-        step3_title: "Build in public",
-        step3_text: "Teams work in the same physical space, using AI, code, research, and fast prototyping.",
-        step4_title: "Present to judges",
-        step4_text: "Final projects are presented and the winning team receives the prize.",
+        // AI Literacy Section
+        ai_title: "AI Seminar Without the Pafos",
+        ai_subtitle: "A super crash course in AI literacy: a brain-opening shift in how you work with AI and get x10 results.",
+        ai_text: "In two days, you may move through a learning curve that usually takes months. Not through lectures, but through shared work side by side with students for whom search, coding, prototyping, and AI iteration are already a natural environment.",
+        ai_bullet1: "see and touch real custom AI workflows in action",
+        ai_bullet2: "cross practical thresholds and dead ends in AI harnessing and coding",
+        ai_bullet3: "understand what AI can actually do for your business",
+        ai_bullet4: "leave with a huge amount of new experience, insights, and an IQ-140 energy charge",
+
+        // Prototype Section
+        proto_title: "A prototype for a project that matters to you",
+        proto_text: "During the sprint, you can form a team and turn your challenge into a prototype, demo, internal tool, or first working version.",
+        proto_bullet1: "build around your own business request",
+        proto_bullet2: "test an idea quickly",
+        proto_bullet3: "answer hard questions and get direct feedback",
+        proto_bullet4: "see how AI-native teenagers approach complexity",
+        proto_bullet5: "leave with a concrete next step",
 
         // Talent Core Section
-        talent_title: "The Talent Core",
-        talent_intro: "At the center of the sprint is a small circle of AI-native teenagers with unusual technical range. This is a collective portrait of the group — not a claim that every participant has every achievement.",
-        talent1: "Students from IMS, one of the strongest mathematics schools in Cyprus",
-        talent2: "Several teenagers with IQ levels found in roughly 0.05% of the population",
-        talent3: "Best Computer Science result in Europe at IGCSE level",
-        talent4: "Winners of Cyprus mathematics olympiads",
-        talent5: "Successful commercial software development experience",
-        talent6: "Designed and 3D-printed a robotic arm prototype for chemical experiments with computer vision",
-        talent7: "Optimized workflows for businesses and business owners",
-        talent8: "Practical fluency with AI tools, coding, fast research, and prototyping",
+        talent_title: "The talent core",
+        talent_intro: "For these 1.5 days and one non-stop building night, your partners in the adventure will include a selected group of young builders: people you can learn AI from — and people you can teach project management, communication, and entrepreneurial thinking to.",
+        talent_clarification: "This is a collective portrait of the group, not a claim that every participant has every achievement.",
+        talent1: "students from IMS, the strongest mathematics school in Cyprus",
+        talent2: "winners of Cyprus mathematics olympiads",
+        talent3: "students with top Computer Science results in Europe",
+        talent4: "teenagers with IQ levels found in roughly the top 0.05%",
+        talent5: "nerds, Sheldons, super-geeks, neurodiverse and experiment-ready students with real AI project experience",
+        talent6: "a young team that designed and 3D-printed a robotic arm prototype for chemical experiments with computer vision",
+        talent7: "creators of working workflows for medium and large businesses and their owners, saving hundreds of hours and tens of thousands of euros per month",
 
-        // What You Can Build Section
-        build_title: "What Could Be Prototyped",
+        // Format Section
+        format_title: "Format",
+        format_text: "4–6 entrepreneurs and managers bring challenges they genuinely care about to a unique group of super-teenagers. In one physical space, they spend 1.5 days building real projects of any complexity. Judges and mentors help on request and award the best project.",
+        format_extra: "We do not limit the theme. We encourage creative exploration: try radical experiments in the strongest environment of the first native-AI generation.",
+
+        // How It Works Section
+        how_title: "How the sprint works",
+        step1_title: "Bring a challenge",
+        step1_text: "Come with a business idea, workflow, pain point, product hypothesis, or question for an innovation project.",
+        step2_title: "Meet the talent core",
+        step2_text: "Entrepreneurs and young builders meet, discuss possible directions, and choose who they want to work with.",
+        step3_title: "Build live",
+        step3_text: "Teams work in the same physical space, using AI, code, research, and fast prototyping.",
+        step4_title: "Present to the jury",
+        step4_text: "Final projects are presented to the jury, and the winning team receives the prize.",
+
+        // What Can Be Prototyped
+        build_title: "What can be prototyped?",
         build1: "AI assistant for internal operations",
-        build2: "Workflow automation",
-        build3: "Customer support or sales assistant",
-        build4: "Analytics dashboard",
-        build5: "Document processing tool",
-        build6: "Educational or training product",
-        build7: "Computer vision prototype",
-        build8: "Internal knowledge base",
-        build9: "MVP for a new product idea",
-        build_note: "The best projects are not abstract. They start from a real business tension.",
+        build2: "workflow automation",
+        build3: "your boldest business idea",
+        build4: "the project you were afraid to start",
+        build5: "customer support or sales assistant",
+        build6: "analytics dashboard",
+        build7: "document processing tool",
+        build8: "educational or training product",
+        build9: "computer vision prototype",
+        build10: "internal knowledge base",
+        build11: "MVP for a new product idea",
+        build_note: "The best projects do not start from abstract ideas. They start from real business tension.",
 
         // Disclaimer Section
-        disclaimer_title: "No Fake Guarantees. Real Conditions for Acceleration.",
-        disclaimer_text: "Hybrid Hackathon does not guarantee a finished product. The default recommendation is to form projects around entrepreneurs' real requests, but teams are formed organically: entrepreneurs and young builders choose each other after meeting, discussing ideas, and sensing where the strongest collaboration can happen.",
+        disclaimer_title: "No fake guarantees. Real conditions for acceleration.",
+        disclaimer_text: "Hybrid Hackathon does not guarantee a finished product. By default, we recommend forming projects around entrepreneurs' real requests, but teams emerge organically: entrepreneurs and young builders choose each other after meeting, discussing ideas, and sensing where the strongest collaboration can happen.",
+
+        // What We Need From You
+        need_title: "What we need from you",
+        need1: "a bold idea for a program, bot, app, or business-process automation you wanted but did not dare to build",
+        need2: "full-time Saturday commitment and participation in the winning team award ceremony on Sunday, 14:00–16:00",
+        need3: "250 € contribution: it goes fully into prizes, venue, and food",
+        need4: "an open mind, a mentor's heart, and entrepreneurial skills to multiply your idea by creative potential, AI mastery, and IQ",
 
         // Contribution Section
-        contribution_title: "Contribution Model",
+        contribution_title: "Contribution model",
         contribution_entrepreneur: "Entrepreneur",
         contribution_patron: "Patron",
-        contribution_note: "100% of contributions go into prizes, venue, and food. The winning team receives the prize. Patrons help increase the quality of the event and the final prize pool.",
+        contribution_note: "100% of contributions go into the event: prizes, venue, and food. The winning team receives the prize. Patrons help strengthen the event and increase the final prize pool.",
 
-        // Jury Section
-        jury_title: "Jury & Mentors",
-        jury_placeholder: "To be announced soon",
+        // Jury and Mentors
+        jury_title: "Jury and mentors",
+        jury_kirill_name: "Kirill Krinkin",
+        jury_kirill_desc: "Description to be added after confirmation.",
+        jury_evgeny_name: "Evgeny Tarasov",
+        jury_evgeny_desc: "Basium · description to be added after confirmation.",
+        jury_claude_name: "Claude.ai",
+        jury_claude_desc: "Co-host of the legendary \"AI Without the Pafos\" seminar.",
+
+        // Project Moderators
+        moderators_title: "Project moderators",
+        mod_timur_name: "Timur Atnashev, PhD",
+        mod_timur_desc: "Co-founder of MetaGames Lab · business tracker.",
+        mod_ekaterina_name: "Ekaterina Astafieva",
+        mod_ekaterina_desc: "Leading GR specialist · InDrive / La Roche.",
 
         // Form
         form_title: "Apply as an Entrepreneur",
-        form_name_label: "Full Name",
+        form_name_label: "Full name",
         form_name_placeholder: "Enter your full name",
         form_email_label: "Email",
         form_email_placeholder: "Enter your email",
         form_phone_label: "Phone",
         form_phone_placeholder: "Enter your phone number",
-        form_company_label: "Company / Project",
+        form_company_label: "Company / project",
         form_company_placeholder: "Enter your company or project name",
-        form_idea_label: "What challenge, workflow, or idea would you like to explore?",
-        form_idea_placeholder: "Describe your idea or challenge (optional)",
-        form_participation_label: "Participation Type",
+        form_idea_label: "What challenge, workflow, program, bot, app, or business idea matters to you?",
+        form_idea_placeholder: "Describe your idea or challenge",
+        form_participation_label: "Participation type",
         form_type_entrepreneur: "Entrepreneur",
         form_type_patron: "Patron",
         form_consent: "I agree to be contacted about Hybrid Hackathon.",
@@ -109,37 +143,62 @@ const TRANSLATIONS = {
         error_generic: "Something went wrong. Please try again.",
 
         // Footer
-        footer_text: "Hybrid Lab · July 11–12"
+        footer_text: "Hybrid Lab · July 6–7"
     },
 
     ru: {
         // Hero Section
-        hero_badge: "Closed Beta · 11–12 июля",
-        hero_title: "Соберите проект с AI-native талантами. Научитесь ИИ через действие.",
-        hero_subtitle: "Двухдневный Hybrid Lab sprint для предпринимателей, которые хотят понять ИИ через реальную работу — и собрать прототип проекта, важного для своего бизнеса.",
-        hero_meta: "5 предпринимателей · редкое ядро подростков · одна комната · реальные проекты",
+        hero_badge: "Closed Beta · 6–7 июля",
+        hero_title: "Сделайте то, что боялись сделать с ИИ",
+        hero_subtitle: "Уникальная возможность для предпринимателей и управленцев на полтора дня включить турбо-режим освоения ИИ — и собрать прототип проекта, важного для вашего бизнеса.",
+        hero_meta: "4–6 предпринимателей · AI-native подростки · одна комната · реальные проекты · полтора дня и ночь non-stop сборки",
         cta_apply: "Подать заявку предпринимателя",
         cta_how: "Как это работает",
+        hero_sticker: "ИИ без пафоса. Только работа.",
 
         // Partners
         partners_label: "Партнеры и поддержка",
+        dodo_label: "Официальный провайдер и спонсор проекта",
 
-        // Values Section
-        values_title: "Что получают предприниматели",
-        value1_number: "Ценность 01",
-        value1_title: "X10 AI Literacy",
-        value1_text: "За два дня вы можете пройти участок кривой обучения, на который обычно уходят месяцы. Не через лекции, а через работу бок о бок с AI-native билдерами, для которых поиск, кодинг, прототипирование и итерации с ИИ уже стали естественной средой.",
-        value1_bullet1: "Увидеть реальные AI-workflows в действии",
-        value1_bullet2: "Пройти практические пороги в prompting, research, coding и prototyping",
-        value1_bullet3: "Понять, что ИИ реально может дать вашему бизнесу",
-        value1_bullet4: "Уйти не с конспектом, а с более точной интуицией",
-        value2_number: "Ценность 02",
-        value2_title: "Значимый прототип",
-        value2_text: "Принесите реальную задачу, workflow, возможность или продуктовую идею. Во время sprint вы сможете сформировать команду и превратить это в прототип, демо, внутренний инструмент или первую рабочую версию.",
-        value2_bullet1: "Строить вокруг собственного бизнес-запроса",
-        value2_bullet2: "Быстро проверить идею",
-        value2_bullet3: "Увидеть, как AI-native подростки подходят к сложности",
-        value2_bullet4: "Уйти с конкретным следующим шагом",
+        // Core Proposition - Effect of the Monkey
+        core_title: "Турбо-обучение через «эффект обезьяны»",
+        core_text1: "Самый быстрый способ освоить новый способ работы — оказаться рядом с теми, для кого он уже естественен. Вы будете смотреть, пробовать, спорить, ставить задачи, ошибаться, уточнять и снова собирать — вместе с подростками, которые уже живут внутри AI-инструментов.",
+        core_text2: "Это не лекция и не вебинар. Это физическая совместная работа, где предпринимательская задача встречается с AI-native скоростью.",
+
+        // AI Literacy Section
+        ai_title: "Семинар ИИ (без) пафоса",
+        ai_subtitle: "Супер crash course AI-грамотности: взрыв мозга и гарантированное изменение отношения к тому, как работать с AI и получать результаты x10.",
+        ai_text: "За два дня вы можете пройти участок кривой обучения, на который обычно уходят месяцы. Не через лекции, а через совместную работу бок о бок со школьниками, для которых поиск, кодинг, прототипирование и итерации с ИИ уже стали естественной средой.",
+        ai_bullet1: "увидеть и потрогать руками реальные авторские AI-workflows в действии",
+        ai_bullet2: "пройти самому практические пороги и тупики в harnessing и coding с ИИ",
+        ai_bullet3: "понять, что ИИ реально может дать вашему бизнесу",
+        ai_bullet4: "уйти с вагоном нового опыта, инсайтами и зарядом IQ 140",
+
+        // Prototype Section
+        proto_title: "Прототип проекта, который важен именно вам",
+        proto_text: "Во время sprint вы сможете сформировать команду и превратить свою задачу в прототип, демо, внутренний инструмент или первую рабочую версию.",
+        proto_bullet1: "строить вокруг собственного бизнес-запроса",
+        proto_bullet2: "быстро проверить идею",
+        proto_bullet3: "ответить на вопросы и получить жесткую обратную связь по проекту",
+        proto_bullet4: "увидеть, как AI-native подростки подходят к сложности",
+        proto_bullet5: "уйти с конкретным следующим шагом",
+
+        // Talent Core Section
+        talent_title: "Ядро талантов",
+        talent_intro: "Среди ваших партнеров по приключению на эти полтора дня и ночь non-stop программирования — отборные юные билдеры, у которых вы сможете учиться ИИ, и которых вы сами сможете научить управлению проектами, коммуникации и предпринимательскому мышлению.",
+        talent_clarification: "Это коллективный портрет группы, а не утверждение, что каждый участник обладает всеми достижениями сразу.",
+        talent1: "ученики IMS, самой сильной математической школы Кипра",
+        talent2: "победители математических олимпиад Кипра",
+        talent3: "школьники с лучшими результатами по Computer Science в Европе",
+        talent4: "подростки с IQ уровня, который встречается у топ 0,05% людей",
+        talent5: "nerds, Шелдоны, супер-ботаники, нейроразнообразные и готовые к эксперименту школьники с реальным опытом AI-проектов",
+        talent6: "команда юных создателей прототипа роботизированной руки для химических экспериментов с компьютерным зрением: 3D-печать, программирование, computer vision",
+        talent7: "создатели работающих workflows для среднего и крупного бизнеса и их владельцев, экономящих сотни часов и десятки тысяч евро в месяц",
+
+        // Format Section
+        format_title: "Формат",
+        format_text: "4–6 предпринимателей и управленцев приходят с дорогими их сердцу задачами к уникальной сборной супер-подростков. В одном помещении они полтора дня делают реальные проекты любой сложности. Жюри и менторы помогают по запросу и награждают лучший проект.",
+        format_extra: "Мы не ставим ограничений в выборе темы и поощряем творческий поиск: попробуйте радикальные эксперименты в сильном окружении первого native-AI поколения.",
 
         // How It Works Section
         how_title: "Как устроен sprint",
@@ -152,34 +211,31 @@ const TRANSLATIONS = {
         step4_title: "Презентуйте жюри",
         step4_text: "Финальные проекты представляются жюри, а команда-победитель получает приз.",
 
-        // Talent Core Section
-        talent_title: "Ядро талантов",
-        talent_intro: "В центре sprint — небольшой круг AI-native подростков с необычным техническим диапазоном. Это коллективный портрет группы, а не утверждение, что каждый участник обладает всеми достижениями сразу.",
-        talent1: "Ученики IMS, одной из сильнейших математических школ Кипра",
-        talent2: "Несколько подростков с IQ уровня, который встречается примерно у 0,05% людей",
-        talent3: "Лучший результат по Computer Science в Европе на уровне IGCSE",
-        talent4: "Победители математических олимпиад Кипра",
-        talent5: "Успешный опыт коммерческой разработки",
-        talent6: "Проектирование и 3D-печать прототипа роботизированной руки для химических экспериментов с компьютерным зрением",
-        talent7: "Оптимизация workflow для бизнесов и их владельцев",
-        talent8: "Практическая беглость в AI-инструментах, кодинге, быстром исследовании и прототипировании",
-
-        // What You Can Build Section
-        build_title: "Что можно прототипировать",
+        // What Can Be Prototyped
+        build_title: "Что можно прототипировать?",
         build1: "AI-ассистент для внутренних операций",
-        build2: "Автоматизация workflow",
-        build3: "Ассистент для поддержки клиентов или продаж",
-        build4: "Аналитический dashboard",
-        build5: "Инструмент обработки документов",
-        build6: "Образовательный или training-продукт",
-        build7: "Computer vision prototype",
-        build8: "Внутренняя база знаний",
-        build9: "MVP новой продуктовой идеи",
+        build2: "автоматизацию workflow",
+        build3: "вашу самую крутую бизнес-идею",
+        build4: "проект, за который вы побоялись взяться",
+        build5: "ассистент для поддержки клиентов или продаж",
+        build6: "аналитический dashboard",
+        build7: "инструмент обработки документов",
+        build8: "образовательный или training-продукт",
+        build9: "computer vision prototype",
+        build10: "внутреннюю базу знаний",
+        build11: "MVP новой продуктовой идеи",
         build_note: "Лучшие проекты начинаются не с абстрактной идеи, а с реального напряжения в бизнесе.",
 
         // Disclaimer Section
         disclaimer_title: "Без фальшивых гарантий. С реальными условиями для ускорения.",
         disclaimer_text: "Hybrid Hackathon не гарантирует готовый продукт. По умолчанию мы рекомендуем формировать проекты вокруг реальных запросов предпринимателей, но команды складываются органично: предприниматели и молодые билдеры выбирают друг друга после знакомства, обсуждения идей и понимания, где может получиться самая сильная совместная работа.",
+
+        // What We Need From You
+        need_title: "Что нужно от вас?",
+        need1: "крутая и интересная вам идея для программы, бота, приложения или автоматизации бизнес-процесса, которую вы хотели, но не решались сделать",
+        need2: "коммитмент на субботу full-time и участие в награждении команды победителей в воскресенье в 14:00–16:00",
+        need3: "взнос 250 €: он полностью идет в призовой фонд, аренду и еду",
+        need4: "открытый ум, доброе сердце наставника и предпринимательские навыки, чтобы умножить вашу идею на творческий потенциал, AI-мастерство и IQ",
 
         // Contribution Section
         contribution_title: "Модель участия",
@@ -187,12 +243,24 @@ const TRANSLATIONS = {
         contribution_patron: "Патрон",
         contribution_note: "100% взносов идут в событие: призы, аренду и еду. Приз получает вся команда победителей. Патроны помогают усилить событие и увеличить итоговый призовой фонд.",
 
-        // Jury Section
+        // Jury and Mentors
         jury_title: "Жюри и менторы",
-        jury_placeholder: "Скоро будет объявлено",
+        jury_kirill_name: "Кирилл Кринкин",
+        jury_kirill_desc: "Описание будет добавлено после подтверждения.",
+        jury_evgeny_name: "Евгений Тарасов",
+        jury_evgeny_desc: "Basium · описание будет добавлено после подтверждения.",
+        jury_claude_name: "Claude.ai",
+        jury_claude_desc: "Со-ведущий легендарного семинара «ИИ (без) пафоса».",
+
+        // Project Moderators
+        moderators_title: "Модераторы проекта",
+        mod_timur_name: "Тимур Атнашев, PhD",
+        mod_timur_desc: "Со-основатель MetaGames Lab · бизнес-трекер.",
+        mod_ekaterina_name: "Екатерина Астафьева",
+        mod_ekaterina_desc: "Ведущий специалист по GR · InDrive / La Roche.",
 
         // Form
-        form_title: "Заявка для предпринимателя",
+        form_title: "Подать заявку предпринимателя",
         form_name_label: "Имя и фамилия",
         form_name_placeholder: "Введите ваше полное имя",
         form_email_label: "Email",
@@ -201,8 +269,8 @@ const TRANSLATIONS = {
         form_phone_placeholder: "Введите номер телефона",
         form_company_label: "Компания / проект",
         form_company_placeholder: "Название компании или проекта",
-        form_idea_label: "Какую задачу, workflow или идею вы хотели бы исследовать?",
-        form_idea_placeholder: "Опишите идею или задачу (необязательно)",
+        form_idea_label: "Какая задача, workflow, программа, бот, приложение или бизнес-идея вам важна?",
+        form_idea_placeholder: "Опишите идею или задачу",
         form_participation_label: "Тип участия",
         form_type_entrepreneur: "Предприниматель",
         form_type_patron: "Патрон",
@@ -217,7 +285,7 @@ const TRANSLATIONS = {
         error_generic: "Что-то пошло не так. Попробуйте еще раз.",
 
         // Footer
-        footer_text: "Hybrid Lab · 11–12 июля"
+        footer_text: "Hybrid Lab · 6–7 июля"
     }
 };
 

@@ -1,6 +1,6 @@
 # Hybrid Lab Landing Page
 
-A premium, brutalist-style bilingual (EN/RU) landing page for **Hybrid Lab** — a two-day AI-building sprint for entrepreneurs.
+A premium, brutalist-style bilingual (EN/RU) landing page for **Hybrid Lab** — a 1.5-day AI-building sprint for entrepreneurs.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-green.svg)
@@ -29,24 +29,30 @@ A premium, brutalist-style bilingual (EN/RU) landing page for **Hybrid Lab** —
 hybrid-hackathon-LP/
 ├── app/
 │   ├── __init__.py
-│   ├── main.py              # FastAPI application entry
-│   ├── routes.py            # API endpoints
-│   ├── models.py            # Pydantic models
+│   ├── main.py
+│   ├── routes.py
+│   ├── models.py
 │   ├── services/
 │   │   ├── __init__.py
-│   │   └── google_sheets.py # Google Sheets webhook integration
+│   │   └── google_sheets.py
 │   ├── templates/
-│   │   └── index.html       # Landing page template
+│   │   └── index.html
 │   └── static/
 │       ├── css/
-│       │   └── styles.css   # Brutalist responsive styles
+│       │   └── styles.css
 │       ├── js/
-│       │   ├── i18n.js      # Translations (EN/RU)
-│       │   └── main.js      # Form handling & interactions
-│       └── logos/
-│           ├── dodo-pizza.svg
-│           ├── metagames.svg
-│           └── hybrid-lab.svg
+│       │   ├── i18n.js
+│       │   └── main.js
+│       ├── logos/
+│       │   ├── dodo-pizza.jpg
+│       │   ├── metagames.png
+│       │   └── hybrid-lab.png
+│       └── people/
+│           ├── kirill-krinkin.jpg
+│           ├── evgeny-tarasov.jpg
+│           ├── claude-ai.png
+│           ├── timur-atnashev.jpg
+│           └── ekaterina-astafieva.jpg
 ├── requirements.txt
 ├── Procfile
 ├── railway.json
@@ -58,16 +64,28 @@ hybrid-hackathon-LP/
 
 Put your actual logo files here:
 
-- **Dodo Pizza**: `app/static/logos/dodo-pizza.svg`
-- **MetaGames**: `app/static/logos/metagames.svg`
-- **Hybrid Lab**: `app/static/logos/hybrid-lab.svg`
-
-If using PNG files, update the image paths in `index.html` accordingly.
+- **Dodo Pizza**: `app/static/logos/dodo-pizza.svg` or `.jpg`/`.png`
+- **MetaGames**: `app/static/logos/metagames.svg` or `.png`
+- **Hybrid Lab**: `app/static/logos/hybrid-lab.svg` or `.png`
 
 **Recommended format**: SVG with transparent background  
-**Recommended max height**: 48px
+**Recommended max height**: 48-64px
 
-The current files are text-based placeholders. Replace them with actual logos.
+If using different file extensions, update the image paths in `index.html`.
+
+## Replacing People Photos
+
+Put photos here:
+
+- `app/static/people/kirill-krinkin.jpg`
+- `app/static/people/evgeny-tarasov.jpg`
+- `app/static/people/claude-ai.png`
+- `app/static/people/timur-atnashev.jpg`
+- `app/static/people/ekaterina-astafieva.jpg`
+
+**Recommended format**: JPG or PNG, square crop, at least 600x600px.
+
+If a photo is missing, a monochrome initials placeholder will be displayed automatically.
 
 ## Local Development
 
@@ -103,7 +121,6 @@ The current files are text-based placeholders. Replace them with actual logos.
 4. **Set up environment variables** (optional for local dev)
    ```bash
    cp .env.example .env
-   # Edit .env if you want to test Google Sheets integration locally
    ```
 
 5. **Run the development server**
@@ -116,7 +133,7 @@ The current files are text-based placeholders. Replace them with actual logos.
    http://localhost:8000
    ```
 
-> **Note**: The app works locally without Google Sheets configuration. Applications will be logged to the console instead.
+> **Note**: The app works locally without Google Sheets configuration. Applications will be logged to the console.
 
 ## Google Sheets Integration
 
@@ -146,14 +163,8 @@ Landing Page → FastAPI API → Google Apps Script Webhook → Google Sheets
 ```javascript
 /**
  * Hybrid Lab - Google Sheets Webhook
- * 
- * This script receives application data from the FastAPI backend
- * and writes it to the appropriate sheet.
  */
 
-/**
- * Handle POST requests from the webhook
- */
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
@@ -182,16 +193,10 @@ function doPost(e) {
   }
 }
 
-/**
- * Handle GET requests (for testing)
- */
 function doGet(e) {
   return createResponse(true, 'Hybrid Lab webhook is active. Use POST to submit applications.');
 }
 
-/**
- * Write entrepreneur application to sheet
- */
 function writeEntrepreneur(timestamp, payload) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName('Entrepreneurs');
@@ -221,7 +226,6 @@ function writeEntrepreneur(timestamp, payload) {
     headerRange.setFontColor('#ffffff');
   }
   
-  // Map participation type to readable format
   let participationType = payload.participation_type || 'entrepreneur_250';
   let contributionAmount = payload.contribution_amount || 250;
   
@@ -249,9 +253,6 @@ function writeEntrepreneur(timestamp, payload) {
   sheet.appendRow(row);
 }
 
-/**
- * Write student application to sheet (kept for future use)
- */
 function writeStudent(timestamp, payload) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName('Students');
@@ -297,9 +298,6 @@ function writeStudent(timestamp, payload) {
   sheet.appendRow(row);
 }
 
-/**
- * Format ISO timestamp to readable format
- */
 function formatTimestamp(isoString) {
   if (!isoString) return new Date().toISOString();
   
@@ -311,9 +309,6 @@ function formatTimestamp(isoString) {
   }
 }
 
-/**
- * Create JSON response
- */
 function createResponse(success, message) {
   const response = {
     success: success,
@@ -329,16 +324,14 @@ function createResponse(success, message) {
 #### 3. Deploy the Apps Script
 
 1. Click **Deploy → New deployment**
-2. Click the gear icon next to "Select type" and choose **Web app**
+2. Click the gear icon and choose **Web app**
 3. Configure:
    - **Description**: "Hybrid Lab Webhook v1"
    - **Execute as**: Me
    - **Who has access**: Anyone
 4. Click **Deploy**
 5. Click **Authorize access** and grant permissions
-6. **Copy the Web App URL** - you'll need this for Railway
-
-> **Important**: The URL looks like `https://script.google.com/macros/s/ABC123.../exec`
+6. **Copy the Web App URL**
 
 #### 4. Configure Railway
 
@@ -390,29 +383,11 @@ Submit an entrepreneur application.
 - `entrepreneur_250` — Entrepreneur (250 €)
 - `patron_500` — Patron (500 €)
 
-**Success Response:**
-```json
-{
-  "success": true,
-  "message": "Thank you. Your application has been received. We will contact you soon."
-}
-```
-
 ### `GET /health`
 
 Health check endpoint.
 
-**Response:**
-```json
-{
-  "status": "healthy",
-  "app": "Hybrid Hackathon"
-}
-```
-
 ## Deployment on Railway
-
-### Quick Deploy
 
 1. **Push to GitHub**
    ```bash
@@ -422,7 +397,6 @@ Health check endpoint.
    ```
 
 2. **Deploy on Railway**
-   - Go to [Railway](https://railway.app)
    - Connect your GitHub repo
    - Railway auto-detects the configuration
 
@@ -437,21 +411,19 @@ Health check endpoint.
 |----------|----------|-------------|
 | `PORT` | No | Set automatically by Railway |
 | `GOOGLE_SHEETS_WEBHOOK_URL` | Yes (production) | Google Apps Script Web App URL |
-| `GOOGLE_SHEETS_WEBHOOK_SECRET` | No | Optional security secret |
 
 ## Language Configuration
 
 The landing page automatically:
-1. Detects browser language (Russian if browser language starts with "ru")
-2. Falls back to English for all other languages
-3. Saves user preference in localStorage
+1. Detects browser language (Russian if starts with "ru")
+2. Falls back to English
+3. Saves preference in localStorage
 4. Allows manual switching via EN/RU toggle
 
 ## Security Notes
 
-- The Google Sheets webhook URL is stored only in server-side environment variables
-- The URL is never exposed to the frontend
-- Contribution amounts are calculated server-side (not trusted from frontend)
+- Google Sheets webhook URL is stored only in server-side environment variables
+- Contribution amounts are calculated server-side
 - All form data is validated server-side with Pydantic
 
 ## Browser Support
@@ -469,4 +441,4 @@ MIT License
 
 ---
 
-**Hybrid Lab** — Build with AI-native talent. Learn AI by doing.
+**Hybrid Lab** — Build the AI project you were afraid to start.
