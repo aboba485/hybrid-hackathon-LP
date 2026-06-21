@@ -380,54 +380,68 @@ h1, h2, h3, h4, h5, h6 {
    Partners Section
    -------------------------------------------------------------------------- */
 .partners {
-    padding-block: var(--space-xl);
-    border-bottom: var(--border-thin);
+    padding-block: var(--space-3xl);
 }
 
-.partners-label {
-    font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--space-lg);
+.partners-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin-bottom: var(--space-xl);
+    line-height: 1.6;
 }
 
 .partners-grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: var(--space-xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
 }
 
-.partner-item {
+.partner-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
-}
-
-.partner-main {
-    flex-basis: 100%;
-    margin-bottom: var(--space-md);
-}
-
-.partner-logo {
-    max-height: 64px;
-    width: auto;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: var(--border-thin);
     transition: var(--transition-base);
 }
 
-.partner-logo:hover {
+.partner-card:hover {
+    background: var(--color-surface);
+}
+
+.partner-logo-card {
+    min-height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+
+.partner-logo-card img {
+    width: 100%;
+    max-width: 220px;
+    height: 72px;
+    object-fit: contain;
+    transition: var(--transition-base);
+}
+
+.partner-card:hover .partner-logo-card img {
     transform: scale(1.05);
 }
 
-.partner-desc {
+.partner-label {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    line-height: 1.4;
+    min-height: 2.8em;
 }
 
 /* --------------------------------------------------------------------------
@@ -1040,6 +1054,16 @@ h1, h2, h3, h4, h5, h6 {
     .people-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .partner-logo-card img {
+        max-width: 160px;
+        height: 56px;
+    }
 }
 
 /* Large Mobile (430px - 767px) */
@@ -1051,6 +1075,10 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-cta .btn {
         width: 100%;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
     }
     
     .steps-grid {
@@ -1072,12 +1100,21 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .partners-grid {
-        flex-direction: column;
-        gap: var(--space-lg);
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
     }
     
-    .partner-logo {
-        max-height: 48px;
+    .partner-card {
+        padding: var(--space-md);
+    }
+    
+    .partner-logo-card {
+        min-height: 100px;
+    }
+    
+    .partner-logo-card img {
+        max-width: 180px;
+        height: 60px;
     }
     
     .lang-switcher {
@@ -1089,12 +1126,20 @@ h1, h2, h3, h4, h5, h6 {
     .need-list li {
         font-size: var(--font-size-base);
     }
+    
+    .footer-logo {
+        max-height: 36px;
+    }
 }
 
 /* Medium Mobile (390px - 429px) */
 @media (max-width: 429px) {
     :root {
         --container-padding: 16px;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 5.5vw, 2rem);
     }
     
     .radio-label {
@@ -1111,6 +1156,15 @@ h1, h2, h3, h4, h5, h6 {
         width: 100px;
         height: 100px;
     }
+    
+    .partner-logo-card {
+        min-height: 80px;
+    }
+    
+    .partner-logo-card img {
+        max-width: 150px;
+        height: 50px;
+    }
 }
 
 /* Small Mobile (360px - 389px) */
@@ -1123,6 +1177,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 10px;
     }
     
+    .hero-title {
+        font-size: clamp(1.35rem, 5vw, 1.75rem);
+    }
+    
     .section-title {
         font-size: var(--font-size-2xl);
     }
@@ -1130,6 +1188,15 @@ h1, h2, h3, h4, h5, h6 {
     .hero-sticker {
         font-size: 10px;
         padding: 6px 12px;
+    }
+    
+    .partner-logo-card img {
+        max-width: 130px;
+        height: 44px;
+    }
+    
+    .partner-label {
+        font-size: 10px;
     }
 }
 

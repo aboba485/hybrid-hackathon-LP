@@ -6,8 +6,8 @@
 const TRANSLATIONS = {
     en: {
         // Hero Section
-        hero_badge: "Closed Beta · July 6–7",
-        hero_title: "Build the AI project you were afraid to start",
+        hero_badge: "Open Beta. Early Access · July 6–7",
+        hero_title: "Build what you wanted to build with AI — but were afraid to start",
         hero_subtitle: "A rare 1.5-day sprint for entrepreneurs and managers to enter turbo mode with AI — and prototype a project that actually matters to their business.",
         hero_meta: "4–6 entrepreneurs · AI-native teenagers · one room · real projects · 1.5 days and one non-stop building night",
         cta_apply: "Apply as an Entrepreneur",
@@ -15,8 +15,11 @@ const TRANSLATIONS = {
         hero_sticker: "AI without the hype. Just work.",
 
         // Partners
-        partners_label: "Partners & Support",
+        partners_title: "Partners & Support",
+        partners_subtitle: "The project is supported by partners who help create the environment, prize pool, food, and event infrastructure.",
         dodo_label: "Official provider and sponsor of the project",
+        metagames_label: "Project partner",
+        hybridlab_label: "Organizer and project lab",
 
         // Core Proposition - Effect of the Monkey
         core_title: "Turbo learning through imitation and shared work",
@@ -148,8 +151,8 @@ const TRANSLATIONS = {
 
     ru: {
         // Hero Section
-        hero_badge: "Closed Beta · 6–7 июля",
-        hero_title: "Сделайте то, что боялись сделать с ИИ",
+        hero_badge: "Open Beta. Early Access · 6–7 июля",
+        hero_title: "Сделайте то, что ХОТЕЛИ, но боялись сделать с ИИ",
         hero_subtitle: "Уникальная возможность для предпринимателей и управленцев на полтора дня включить турбо-режим освоения ИИ — и собрать прототип проекта, важного для вашего бизнеса.",
         hero_meta: "4–6 предпринимателей · AI-native подростки · одна комната · реальные проекты · полтора дня и ночь non-stop сборки",
         cta_apply: "Подать заявку предпринимателя",
@@ -157,8 +160,11 @@ const TRANSLATIONS = {
         hero_sticker: "ИИ без пафоса. Только работа.",
 
         // Partners
-        partners_label: "Партнеры и поддержка",
+        partners_title: "Партнеры и поддержка",
+        partners_subtitle: "Проект проходит при поддержке партнеров, которые помогают собрать среду, призовой фонд, еду и инфраструктуру события.",
         dodo_label: "Официальный провайдер и спонсор проекта",
+        metagames_label: "Партнер проекта",
+        hybridlab_label: "Организатор и лаборатория проекта",
 
         // Core Proposition - Effect of the Monkey
         core_title: "Турбо-обучение через «эффект обезьяны»",
