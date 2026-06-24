@@ -8,9 +8,11 @@ const TRANSLATIONS = {
         // Hero Section
         hero_badge: "Open Beta. Early Access · July 11–12",
         hero_title: "Build what you wanted to build with AI — but were afraid to start",
-        hero_subtitle: "A rare 1.5-day sprint for entrepreneurs and managers to enter turbo mode with AI — and prototype a project that actually matters to their business.",
+        hero_subtitle: "While you build a prototype that matters to your business side by side with super-smart AI-native teenagers, you personally cross several thresholds of AI mastery — in turbo mode, in just 1.5 days.",
         hero_meta: "4–6 entrepreneurs · AI-native teenagers · one room · real projects · 1.5 days and one non-stop building night",
+        hero_facts: "📅 July 11–12 · 📍 Limassol · 👥 only 6 seats · ⏱ 1.5 days · 💶 €250",
         cta_apply: "Apply as an Entrepreneur",
+        cta_chat: "✈ Ask a question on Telegram",
         cta_how: "How it works",
         hero_sticker: "AI without the hype. Just work.",
 
@@ -27,7 +29,7 @@ const TRANSLATIONS = {
         core_text2: "This is not a lecture or a webinar. It is physical co-working where entrepreneurial intent meets AI-native speed.",
 
         // AI Literacy Section
-        ai_title: "AI Seminar Without the Pafos",
+        ai_title: "AI Turbo Mode Without the Pafos",
         ai_subtitle: "A super crash course in AI literacy: a brain-opening shift in how you work with AI and get x10 results.",
         ai_text: "In two days, you may move through a learning curve that usually takes months. Not through lectures, but through shared work side by side with students for whom search, coding, prototyping, and AI iteration are already a natural environment.",
         ai_bullet1: "see and touch real custom AI workflows in action",
@@ -107,11 +109,11 @@ const TRANSLATIONS = {
         // Jury and Mentors
         jury_title: "Jury and mentors",
         jury_kirill_name: "Kirill Krinkin",
-        jury_kirill_desc: "Description to be added after confirmation.",
+        jury_kirill_desc: "JetBrains Research · AI & robotics · Computer Science Center lecturer.",
         jury_evgeny_name: "Evgeny Tarasov",
-        jury_evgeny_desc: "Basium · description to be added after confirmation.",
+        jury_evgeny_desc: "Founder of Basium — a platform for launching online businesses.",
         jury_claude_name: "Claude.ai",
-        jury_claude_desc: "Co-host of the legendary \"AI Without the Pafos\" seminar.",
+        jury_claude_desc: "Co-host of the legendary \"AI Turbo Mode Without the Pafos\".",
 
         // Project Moderators
         moderators_title: "Project moderators",
@@ -122,12 +124,15 @@ const TRANSLATIONS = {
 
         // Form
         form_title: "Apply as an Entrepreneur",
+        form_note: "Only 6 seats for entrepreneurs. Applying isn't a payment — we'll first meet and get to know each other.",
+        form_chat_prefix: "Not ready to apply yet?",
+        form_chat_link: "Ask a question on Telegram →",
         form_name_label: "Full name",
         form_name_placeholder: "Enter your full name",
         form_email_label: "Email",
         form_email_placeholder: "Enter your email",
-        form_phone_label: "Phone",
-        form_phone_placeholder: "Enter your phone number",
+        form_phone_label: "Telegram / Phone",
+        form_phone_placeholder: "@username or phone number",
         form_company_label: "Company / project",
         form_company_placeholder: "Enter your company or project name",
         form_idea_label: "What challenge, workflow, program, bot, app, or business idea matters to you?",
@@ -153,9 +158,11 @@ const TRANSLATIONS = {
         // Hero Section
         hero_badge: "Open Beta. Early Access · 11–12 июля",
         hero_title: "Сделайте то, что ХОТЕЛИ, но боялись сделать с ИИ",
-        hero_subtitle: "Уникальная возможность для предпринимателей и управленцев на полтора дня включить турбо-режим освоения ИИ — и собрать прототип проекта, важного для вашего бизнеса.",
+        hero_subtitle: "Пока вы вместе с супер-умными AI-native подростками собираете прототип нужного вам проекта, вы сами в турбо-режиме проходите несколько порогов освоения ИИ — всего за полтора дня.",
         hero_meta: "4–6 предпринимателей · AI-native подростки · одна комната · реальные проекты · полтора дня и ночь non-stop сборки",
+        hero_facts: "📅 11–12 июля · 📍 Лимассол · 👥 всего 6 мест · ⏱ 1.5 дня · 💶 250 €",
         cta_apply: "Подать заявку предпринимателя",
+        cta_chat: "✈ Задать вопрос в Telegram",
         cta_how: "Как это работает",
         hero_sticker: "ИИ без пафоса. Только работа.",
 
@@ -172,7 +179,7 @@ const TRANSLATIONS = {
         core_text2: "Это не лекция и не вебинар. Это физическая совместная работа, где предпринимательская задача встречается с AI-native скоростью.",
 
         // AI Literacy Section
-        ai_title: "Семинар ИИ (без) пафоса",
+        ai_title: "Турбо режим ИИ (без) пафоса",
         ai_subtitle: "Супер crash course AI-грамотности: взрыв мозга и гарантированное изменение отношения к тому, как работать с AI и получать результаты x10.",
         ai_text: "За два дня вы можете пройти участок кривой обучения, на который обычно уходят месяцы. Не через лекции, а через совместную работу бок о бок со школьниками, для которых поиск, кодинг, прототипирование и итерации с ИИ уже стали естественной средой.",
         ai_bullet1: "увидеть и потрогать руками реальные авторские AI-workflows в действии",
@@ -252,11 +259,11 @@ const TRANSLATIONS = {
         // Jury and Mentors
         jury_title: "Жюри и менторы",
         jury_kirill_name: "Кирилл Кринкин",
-        jury_kirill_desc: "Описание будет добавлено после подтверждения.",
+        jury_kirill_desc: "JetBrains Research · ИИ и робототехника · преподаватель Computer Science Center.",
         jury_evgeny_name: "Евгений Тарасов",
-        jury_evgeny_desc: "Basium · описание будет добавлено после подтверждения.",
+        jury_evgeny_desc: "Основатель Basium — платформы для запуска онлайн-бизнеса.",
         jury_claude_name: "Claude.ai",
-        jury_claude_desc: "Со-ведущий легендарного семинара «ИИ (без) пафоса».",
+        jury_claude_desc: "Со-ведущий легендарного «Турбо режим ИИ (без) пафоса».",
 
         // Project Moderators
         moderators_title: "Модераторы проекта",
@@ -267,12 +274,15 @@ const TRANSLATIONS = {
 
         // Form
         form_title: "Подать заявку предпринимателя",
+        form_note: "Всего 6 мест для предпринимателей. Заявка — это не оплата: сначала познакомимся и созвонимся.",
+        form_chat_prefix: "Пока не готовы подавать заявку?",
+        form_chat_link: "Задать вопрос в Telegram →",
         form_name_label: "Имя и фамилия",
         form_name_placeholder: "Введите ваше полное имя",
         form_email_label: "Email",
         form_email_placeholder: "Введите ваш email",
-        form_phone_label: "Телефон",
-        form_phone_placeholder: "Введите номер телефона",
+        form_phone_label: "Telegram / Телефон",
+        form_phone_placeholder: "@username или номер телефона",
         form_company_label: "Компания / проект",
         form_company_placeholder: "Название компании или проекта",
         form_idea_label: "Какая задача, workflow, программа, бот, приложение или бизнес-идея вам важна?",
@@ -305,11 +315,12 @@ function getCurrentLanguage() {
     }
     
     const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.toLowerCase().startsWith('ru')) {
-        return 'ru';
+    if (browserLang && browserLang.toLowerCase().startsWith('en')) {
+        return 'en';
     }
-    
-    return 'en';
+
+    // Russian is the default language
+    return 'ru';
 }
 
 /**

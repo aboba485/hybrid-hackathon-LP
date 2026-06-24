@@ -273,6 +273,19 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--color-white);
 }
 
+/* Telegram CTA — the low-friction "talk to a human" path for cold visitors.
+   Inverse of the primary button so it reads as a clear secondary action. */
+.btn-telegram {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.btn-telegram:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
 .btn-block {
     width: 100%;
 }
@@ -353,8 +366,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.02em;
+}
+
+.hero-facts {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
     margin-bottom: var(--space-xl);
     letter-spacing: 0.02em;
+    line-height: 1.9;
 }
 
 .hero-cta {
@@ -432,6 +454,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .partner-card:hover .partner-logo-card img {
     transform: scale(1.05);
+}
+
+/* The Hybrid Lab logo has a dark, fading background, so its visible mark reads
+   smaller than the other logos. Scale it up ~1.5x to balance the visual weight.
+   Using transform keeps the 1.5x ratio at every breakpoint. */
+.partner-logo-card img.logo-hybrid,
+.footer-logo.logo-hybrid {
+    transform: scale(1.5);
+}
+
+.partner-card:hover .partner-logo-card img.logo-hybrid {
+    transform: scale(1.575);
 }
 
 .partner-label {
@@ -747,7 +781,27 @@ h1, h2, h3, h4, h5, h6 {
 .form-title {
     font-size: var(--font-size-3xl);
     font-weight: 700;
+    margin-bottom: var(--space-md);
+}
+
+.form-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.form-chat-line {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
     margin-bottom: var(--space-xl);
+}
+
+.form-chat-line a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .application-form {

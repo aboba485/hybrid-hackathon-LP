@@ -7,14 +7,19 @@ from pydantic import BaseModel, EmailStr, field_validator
 
 
 class EntrepreneurApplication(BaseModel):
-    """Model for entrepreneur application form."""
+    """Model for entrepreneur application form.
+
+    The public form collects only name, contact (Telegram/phone), and consent.
+    The other fields are kept optional for backward compatibility with the
+    Google Sheets webhook and potential future use.
+    """
     full_name: str
-    email: EmailStr
-    phone: str
-    company: str
-    project_idea: Optional[str] = None
-    participation_type: Literal["entrepreneur_250", "patron_500"]
+    phone: str  # contact: Telegram handle or phone number
     consent_to_contact: bool
+    email: Optional[EmailStr] = None
+    company: Optional[str] = None
+    project_idea: Optional[str] = None
+    participation_type: Literal["entrepreneur_250", "patron_500"] = "entrepreneur_250"
     language: Literal["en", "ru"] = "en"
 
     @field_validator("full_name")
@@ -28,14 +33,7 @@ class EntrepreneurApplication(BaseModel):
     @classmethod
     def validate_phone(cls, v: str) -> str:
         if not v or not v.strip():
-            raise ValueError("Phone is required")
-        return v.strip()
-
-    @field_validator("company")
-    @classmethod
-    def validate_company(cls, v: str) -> str:
-        if not v or not v.strip():
-            raise ValueError("Company is required")
+            raise ValueError("Contact is required")
         return v.strip()
 
     @field_validator("consent_to_contact")

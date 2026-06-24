@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hybrid Lab — A 1.5-day AI sprint for entrepreneurs. Build the AI project you were afraid to start.">
     <meta name="theme-color" content="#0a0a0a">
     <title>Hybrid Lab | AI Sprint for Entrepreneurs</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/logos/hybrid-lab.png">
+    <link rel="apple-touch-icon" href="/static/logos/hybrid-lab.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +22,8 @@
 <body>
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="ru">RU</button>
     </div>
 
     <!-- Hero Section -->
@@ -29,8 +33,10 @@
             <h1 class="hero-title" data-i18n="hero_title">Build what you wanted to build with AI — but were afraid to start</h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">A rare 1.5-day sprint for entrepreneurs and managers to enter turbo mode with AI — and prototype a project that actually matters to their business.</p>
             <p class="hero-meta" data-i18n="hero_meta">4–6 entrepreneurs · AI-native teenagers · one room · real projects · 1.5 days and one non-stop building night</p>
+            <div class="hero-facts" data-i18n="hero_facts">📅 July 11–12 · 📍 Limassol · 👥 only 6 seats · ⏱ 1.5 days · 💶 €250</div>
             <div class="hero-cta">
                 <a href="#apply" class="btn btn-primary" data-i18n="cta_apply">Apply as an Entrepreneur</a>
+                <a href="https://t.me/timuratnashev" target="_blank" rel="noopener" class="btn btn-telegram" data-i18n="cta_chat">Ask a question on Telegram</a>
                 <a href="#how-it-works" class="btn btn-secondary" data-i18n="cta_how">How it works</a>
             </div>
             <div class="hero-sticker" data-i18n="hero_sticker">AI without the hype. Just work.</div>
@@ -57,7 +63,7 @@
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-card">
-                        <img src="/static/logos/hybrid-lab.png" alt="Hybrid Lab">
+                        <img src="/static/logos/hybrid-lab.png" alt="Hybrid Lab" class="logo-hybrid">
                     </div>
                     <span class="partner-label" data-i18n="hybridlab_label">Organizer and project lab</span>
                 </div>
@@ -81,7 +87,7 @@
     <section class="section section-alt" id="ai-literacy">
         <div class="container">
             <div class="section-number">02</div>
-            <h2 class="section-title" data-i18n="ai_title">AI Seminar Without the Pafos</h2>
+            <h2 class="section-title" data-i18n="ai_title">AI Turbo Mode Without the Pafos</h2>
             <p class="section-subtitle" data-i18n="ai_subtitle">A super crash course in AI literacy: a brain-opening shift in how you work with AI and get x10 results.</p>
             <p class="section-text" data-i18n="ai_text">In two days, you may move through a learning curve that usually takes months. Not through lectures, but through shared work side by side with students for whom search, coding, prototyping, and AI iteration are already a natural environment.</p>
             <ul class="feature-list">
@@ -240,7 +246,7 @@
             <div class="people-grid">
                 <div class="person-card">
                     <div class="person-photo">
-                        <img src="/static/people/kirill-krinkin.jpg" alt="Kirill Krinkin" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="/static/people/kirill-krinkin.png" alt="Kirill Krinkin" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="person-initials">КК</div>
                     </div>
                     <h3 class="person-name" data-i18n="jury_kirill_name">Kirill Krinkin</h3>
@@ -260,7 +266,7 @@
                         <div class="person-initials">AI</div>
                     </div>
                     <h3 class="person-name" data-i18n="jury_claude_name">Claude.ai</h3>
-                    <p class="person-desc" data-i18n="jury_claude_desc">Co-host of the legendary "AI Without the Pafos" seminar.</p>
+                    <p class="person-desc" data-i18n="jury_claude_desc">Co-host of the legendary "AI Turbo Mode Without the Pafos".</p>
                 </div>
             </div>
         </div>
@@ -274,7 +280,7 @@
             <div class="people-grid people-grid-small">
                 <div class="person-card">
                     <div class="person-photo">
-                        <img src="/static/people/timur-atnashev.jpg" alt="Timur Atnashev" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="/static/people/timur-atnashev.png" alt="Timur Atnashev" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="person-initials">ТА</div>
                     </div>
                     <h3 class="person-name" data-i18n="mod_timur_name">Timur Atnashev, PhD</h3>
@@ -282,7 +288,7 @@
                 </div>
                 <div class="person-card">
                     <div class="person-photo">
-                        <img src="/static/people/ekaterina-astafieva.jpg" alt="Ekaterina Astafieva" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="/static/people/ekaterina-astafieva.webp" alt="Ekaterina Astafieva" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="person-initials">ЕА</div>
                     </div>
                     <h3 class="person-name" data-i18n="mod_ekaterina_name">Ekaterina Astafieva</h3>
@@ -298,57 +304,27 @@
             <div class="form-wrapper">
                 <div class="section-number">13</div>
                 <h2 class="form-title" data-i18n="form_title">Apply as an Entrepreneur</h2>
-                
+                <p class="form-note" data-i18n="form_note">Only 6 seats for entrepreneurs. Applying isn't a payment — we'll first meet and get to know each other.</p>
+                <p class="form-chat-line">
+                    <span data-i18n="form_chat_prefix">Not ready to apply yet?</span>
+                    <a href="https://t.me/timuratnashev" target="_blank" rel="noopener" data-i18n="form_chat_link">Ask a question on Telegram →</a>
+                </p>
+
                 <form id="entrepreneur-application-form" class="application-form" novalidate>
-                    <input type="hidden" name="language" id="form-language" value="en">
+                    <input type="hidden" name="language" id="form-language" value="ru">
                     
                     <div class="form-group">
                         <label for="full-name" data-i18n="form_name_label">Full name</label>
                         <input type="text" id="full-name" name="full_name" required data-i18n-placeholder="form_name_placeholder">
                         <span class="error-message" data-i18n="error_required">This field is required</span>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="email" data-i18n="form_email_label">Email</label>
-                        <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_placeholder">
-                        <span class="error-message" data-i18n="error_email">Please enter a valid email</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" data-i18n="form_phone_label">Phone</label>
-                        <input type="tel" id="phone" name="phone" required data-i18n-placeholder="form_phone_placeholder">
+                        <label for="phone" data-i18n="form_phone_label">Telegram / Phone</label>
+                        <input type="text" id="phone" name="phone" required data-i18n-placeholder="form_phone_placeholder">
                         <span class="error-message" data-i18n="error_required">This field is required</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="company" data-i18n="form_company_label">Company / project</label>
-                        <input type="text" id="company" name="company" required data-i18n-placeholder="form_company_placeholder">
-                        <span class="error-message" data-i18n="error_required">This field is required</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project-idea" data-i18n="form_idea_label">What challenge, workflow, program, bot, app, or business idea matters to you?</label>
-                        <textarea id="project-idea" name="project_idea" rows="4" data-i18n-placeholder="form_idea_placeholder"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label data-i18n="form_participation_label">Participation type</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="participation_type" value="entrepreneur_250" checked>
-                                <span class="radio-mark"></span>
-                                <span class="radio-text" data-i18n="form_type_entrepreneur">Entrepreneur</span>
-                                <span class="radio-amount">250 €</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="participation_type" value="patron_500">
-                                <span class="radio-mark"></span>
-                                <span class="radio-text" data-i18n="form_type_patron">Patron</span>
-                                <span class="radio-amount">500 €</span>
-                            </label>
-                        </div>
-                    </div>
-                    
+
                     <div class="form-group checkbox-group">
                         <label class="checkbox-label">
                             <input type="checkbox" id="consent" name="consent_to_contact" required>
@@ -384,7 +360,7 @@
                 <div class="footer-logos">
                     <img src="/static/logos/dodo-pizza.jpg" alt="Dodo Pizza" class="footer-logo">
                     <img src="/static/logos/metagames.png" alt="MetaGames" class="footer-logo">
-                    <img src="/static/logos/hybrid-lab.png" alt="Hybrid Lab" class="footer-logo">
+                    <img src="/static/logos/hybrid-lab.png" alt="Hybrid Lab" class="footer-logo logo-hybrid">
                 </div>
                 <p class="footer-text">
                     <span data-i18n="footer_text">Hybrid Lab · July 11–12</span>

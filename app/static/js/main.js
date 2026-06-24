@@ -62,15 +62,10 @@
             }
             
             const formData = new FormData(form);
-            const participationType = formData.get('participation_type') || 'entrepreneur_250';
-            
+
             const data = {
                 full_name: formData.get('full_name'),
-                email: formData.get('email'),
                 phone: formData.get('phone'),
-                company: formData.get('company'),
-                project_idea: formData.get('project_idea') || null,
-                participation_type: participationType,
                 consent_to_contact: formData.get('consent_to_contact') === 'on',
                 language: formData.get('language') || window.i18n?.getCurrentLanguage() || 'en'
             };
@@ -87,39 +82,23 @@
         const lang = window.i18n?.getCurrentLanguage() || 'en';
         
         const fullName = form.querySelector('[name="full_name"]');
-        const email = form.querySelector('[name="email"]');
         const phone = form.querySelector('[name="phone"]');
-        const company = form.querySelector('[name="company"]');
         const consent = form.querySelector('[name="consent_to_contact"]');
-        
+
         if (!fullName.value.trim()) {
-            errors.push({ 
-                field: fullName, 
-                message: window.i18n?.t('error_required', lang) || 'This field is required' 
+            errors.push({
+                field: fullName,
+                message: window.i18n?.t('error_required', lang) || 'This field is required'
             });
         }
-        
-        if (!email.value.trim() || !isValidEmail(email.value)) {
-            errors.push({ 
-                field: email, 
-                message: window.i18n?.t('error_email', lang) || 'Please enter a valid email' 
-            });
-        }
-        
+
         if (!phone.value.trim()) {
-            errors.push({ 
-                field: phone, 
-                message: window.i18n?.t('error_required', lang) || 'This field is required' 
+            errors.push({
+                field: phone,
+                message: window.i18n?.t('error_required', lang) || 'This field is required'
             });
         }
-        
-        if (!company.value.trim()) {
-            errors.push({ 
-                field: company, 
-                message: window.i18n?.t('error_required', lang) || 'This field is required' 
-            });
-        }
-        
+
         if (!consent.checked) {
             errors.push({ 
                 field: form.querySelector('.consent-error'), 
@@ -216,13 +195,7 @@
                 }
                 
                 form.reset();
-                
-                // Re-check the default radio button
-                const defaultRadio = form.querySelector('input[name="participation_type"][value="entrepreneur_250"]');
-                if (defaultRadio) {
-                    defaultRadio.checked = true;
-                }
-                
+
                 if (successMsg) {
                     successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
