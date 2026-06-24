@@ -1052,14 +1052,17 @@ h1, h2, h3, h4, h5, h6 {
     --color-accent: var(--color-black);
 }
 
-/* Primary (submit) button: invert to black-on-white so it stays visible */
-.section-inverted .btn-primary {
+/* Primary button on any inverted (white) surface: invert to black-on-white
+   so it stays visible. */
+.section-inverted .btn-primary,
+.inverted-card .btn-primary {
     background: var(--color-black);
     color: var(--color-white);
     border-color: var(--color-black);
 }
 
-.section-inverted .btn-primary:hover {
+.section-inverted .btn-primary:hover,
+.inverted-card .btn-primary:hover {
     background: transparent;
     color: var(--color-black);
 }
