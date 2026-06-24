@@ -113,7 +113,7 @@ const TRANSLATIONS = {
         jury_evgeny_name: "Evgeny Tarasov",
         jury_evgeny_desc: "Founder of Basium — a platform for launching online businesses.",
         jury_claude_name: "Claude.ai",
-        jury_claude_desc: "Co-host of the legendary \"AI Turbo Mode Without the Pafos\".",
+        jury_claude_desc: "Co-host of the legendary \"AI Without the Pafos\" seminar.",
 
         // Project Moderators
         moderators_title: "Project moderators",
@@ -263,7 +263,7 @@ const TRANSLATIONS = {
         jury_evgeny_name: "Евгений Тарасов",
         jury_evgeny_desc: "Основатель Basium — платформы для запуска онлайн-бизнеса.",
         jury_claude_name: "Claude.ai",
-        jury_claude_desc: "Со-ведущий легендарного «Турбо режим ИИ (без) пафоса».",
+        jury_claude_desc: "Со-ведущий легендарного семинара «ИИ (без) пафоса».",
 
         // Project Moderators
         moderators_title: "Модераторы проекта",
@@ -309,17 +309,7 @@ const TRANSLATIONS = {
  * Get the current language from localStorage or detect from browser
  */
 function getCurrentLanguage() {
-    const stored = localStorage.getItem('hybrid_lab_lang');
-    if (stored && (stored === 'en' || stored === 'ru')) {
-        return stored;
-    }
-    
-    const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.toLowerCase().startsWith('en')) {
-        return 'en';
-    }
-
-    // Russian is the default language
+    // The site is Russian-only — the language switcher has been removed.
     return 'ru';
 }
 
@@ -351,15 +341,17 @@ function applyTranslations(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const translation = t(key, lang);
-        if (translation) {
+        // Skip when the key is missing (t() returns the key itself) so we never
+        // overwrite the HTML fallback text with a raw key like "form_note".
+        if (translation && translation !== key) {
             el.textContent = translation;
         }
     });
-    
+
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         const translation = t(key, lang);
-        if (translation) {
+        if (translation && translation !== key) {
             el.placeholder = translation;
         }
     });
