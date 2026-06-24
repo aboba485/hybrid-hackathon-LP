@@ -1126,23 +1126,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Dodo Pizza sponsor band — in their brand style (vivid orange, white text)
-   with their promo photos. The "hands grabbing pizza" shot is on an orange
-   background that melts into the band. */
+   with their promo photos. A narrow, centered orange card (the dark page shows
+   as a border around it); the "hands grabbing pizza" shot sits on an orange
+   background that melts into the card. */
 .dodo-band {
-    background: #ff6900;
-    color: #ffffff;
-    padding-block: var(--space-2xl);
+    padding-block: var(--space-lg);
     border-bottom: var(--border-thin);
 }
 
 .dodo-band .container {
+    max-width: 720px;
+    background: #ff6900;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: var(--space-lg);
     display: flex;
     flex-direction: column;
+    gap: var(--space-md);
+}
+
+.dodo-band-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: var(--space-lg);
+    flex-wrap: wrap;
 }
 
 .dodo-band-content {
-    max-width: 720px;
+    min-width: 200px;
 }
 
 .dodo-band-eyebrow {
@@ -1156,40 +1168,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dodo-band-title {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     font-weight: 800;
     line-height: 1.15;
-    margin-bottom: var(--space-sm);
 }
 
 .dodo-band-text {
-    font-size: var(--font-size-base);
-    line-height: 1.5;
-    max-width: 640px;
+    max-width: 340px;
+    text-align: right;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
 }
 
 .dodo-band-photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
 }
 
 .dodo-band-photos img {
     display: block;
     width: 100%;
-    height: 260px;
+    height: 180px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 767px) {
+    .dodo-band-text {
+        text-align: left;
+        max-width: none;
+    }
+
     .dodo-band-photos {
         grid-template-columns: 1fr;
     }
 
     .dodo-band-photos img {
-        height: 200px;
+        height: 160px;
     }
 }
 
