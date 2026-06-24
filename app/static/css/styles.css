@@ -468,6 +468,15 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.575);
 }
 
+/* Footer: frame the Hybrid Lab logo on a white plate so its dark tile pops
+   against the dark footer instead of blending in. */
+.footer-logo.logo-hybrid {
+    background: var(--color-white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 1;
+}
+
 .partner-label {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
