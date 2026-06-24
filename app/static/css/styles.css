@@ -1080,6 +1080,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-black);
 }
 
+/* Single inverted card — a white "pattern interrupt" highlight for one item
+   inside an otherwise dark grid (e.g. one talent-item, one step-card). */
+.inverted-card {
+    background: var(--color-white);
+    --color-bg: var(--color-white);
+    --color-surface: var(--color-gray-200);
+    --color-border: var(--color-gray-300);
+    --color-text: var(--color-black);
+    --color-text-secondary: var(--color-gray-700);
+    --color-text-muted: var(--color-gray-600);
+}
+
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
