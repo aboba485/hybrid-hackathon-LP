@@ -1125,6 +1125,65 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 640px;
 }
 
+/* Dodo Pizza sponsor band — in their brand style (vivid orange, white text). */
+.dodo-band {
+    background: #ff6900;
+    color: #ffffff;
+    padding-block: var(--space-2xl);
+    border-bottom: var(--border-thin);
+}
+
+.dodo-band .container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.dodo-band-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 4px solid #ffffff;
+}
+
+.dodo-band-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dodo-band-content {
+    flex: 1;
+    min-width: 260px;
+}
+
+.dodo-band-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+    margin-bottom: var(--space-xs);
+}
+
+.dodo-band-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: var(--space-sm);
+}
+
+.dodo-band-text {
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    max-width: 640px;
+}
+
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */

@@ -22,6 +22,9 @@ const TRANSLATIONS = {
         partners_title: "Partners & Support",
         partners_subtitle: "The project is supported by partners who help create the environment, prize pool, food, and event infrastructure.",
         dodo_label: "Official provider and sponsor of the project",
+        dodo_band_eyebrow: "Official food provider",
+        dodo_band_title: "Dodo Pizza fuels the sprint 🍕",
+        dodo_band_text: "Pizza and drinks from Dodo Pizza — fuel for the creativity of young builders and entrepreneurs through all 1.5 days and the non-stop building night.",
         metagames_label: "Project partner",
         hybridlab_label: "Organizer and project lab",
 
@@ -174,6 +177,9 @@ const TRANSLATIONS = {
         partners_title: "Партнеры и поддержка",
         partners_subtitle: "Проект проходит при поддержке партнеров, которые помогают собрать среду, призовой фонд, еду и инфраструктуру события.",
         dodo_label: "Официальный провайдер и спонсор проекта",
+        dodo_band_eyebrow: "Официальный провайдер питания",
+        dodo_band_title: "Dodo Pizza заправит спринт 🍕",
+        dodo_band_text: "Пицца и напитки от Dodo Pizza — топливо для творчества молодёжи и предпринимателей на все полтора дня и ночь non-stop сборки.",
         metagames_label: "Партнер проекта",
         hybridlab_label: "Организатор и лаборатория проекта",
 
