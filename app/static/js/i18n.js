@@ -125,7 +125,7 @@ const TRANSLATIONS = {
         // Form
         form_title: "Apply as an Entrepreneur",
         form_note: "Only 6 seats for entrepreneurs. Applying isn't a payment — we'll first meet and get to know each other.",
-        form_chat_prefix: "Not ready to apply yet?",
+        form_chat_prefix: "Have a question for the organizers?",
         form_chat_link: "Ask a question on Telegram →",
         form_name_label: "Full name",
         form_name_placeholder: "Enter your full name",
@@ -275,7 +275,7 @@ const TRANSLATIONS = {
         // Form
         form_title: "Подать заявку предпринимателя",
         form_note: "Всего 6 мест для предпринимателей. Заявка — это не оплата: сначала познакомимся и созвонимся.",
-        form_chat_prefix: "Пока не готовы подавать заявку?",
+        form_chat_prefix: "Есть вопрос к организаторам?",
         form_chat_link: "Задать вопрос в Telegram →",
         form_name_label: "Имя и фамилия",
         form_name_placeholder: "Введите ваше полное имя",

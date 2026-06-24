@@ -1026,6 +1026,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
+   Inverted section (Variant A) — one white "pattern interrupt" block that
+   pulls attention to the application form/CTA. Re-maps the semantic color
+   tokens so descendants flip automatically; the few components that use raw
+   black/white are overridden explicitly below.
+   -------------------------------------------------------------------------- */
+.section-inverted {
+    --color-bg: var(--color-white);
+    --color-bg-elevated: var(--color-white);
+    --color-surface: var(--color-gray-100);
+    --color-border: var(--color-gray-300);
+    --color-border-light: var(--color-gray-400);
+    --color-text: var(--color-black);
+    --color-text-secondary: var(--color-gray-600);
+    --color-text-muted: var(--color-gray-500);
+    --color-accent: var(--color-black);
+}
+
+/* Primary (submit) button: invert to black-on-white so it stays visible */
+.section-inverted .btn-primary {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
+}
+
+.section-inverted .btn-primary:hover {
+    background: transparent;
+    color: var(--color-black);
+}
+
+/* Inputs: dark focus ring instead of white */
+.section-inverted .form-group input:focus,
+.section-inverted .form-group textarea:focus {
+    border-color: var(--color-black);
+}
+
+/* Checkbox: checked state becomes black with a white tick */
+.section-inverted .checkbox-label input:checked + .checkmark {
+    background: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.section-inverted .checkbox-label input:checked + .checkmark::after {
+    color: var(--color-white);
+}
+
+.section-inverted .checkbox-label input:focus-visible + .checkmark {
+    outline-color: var(--color-black);
+}
+
+/* "Question for organizers" link */
+.section-inverted .form-chat-line a {
+    color: var(--color-black);
+}
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 .footer {
