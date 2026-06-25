@@ -75,7 +75,7 @@ const TRANSLATIONS = {
         step2_title: "Meet the talent core",
         step2_text: "Entrepreneurs and young builders meet, discuss possible directions, and choose who they want to work with.",
         step3_title: "Build live",
-        step3_text: "Teams work in the same physical space, using AI, code, research, and fast prototyping.",
+        step3_text: "On Saturday, July 11, entrepreneurs and students work in teams in one physical space, using AI, code, research, and fast prototyping.",
         step4_title: "Present to the jury",
         step4_text: "Final projects are presented to the jury, and the winning team receives the prize.",
 
@@ -230,7 +230,7 @@ const TRANSLATIONS = {
         step2_title: "Познакомьтесь с ядром талантов",
         step2_text: "Предприниматели и молодые билдеры знакомятся, обсуждают возможные направления и выбирают, с кем хотят работать.",
         step3_title: "Собирайте вживую",
-        step3_text: "Команды работают в одном физическом пространстве, используя ИИ, код, исследование и быстрое прототипирование.",
+        step3_text: "В течение субботы 11 июля предприниматели и студенты работают в командах в одном физическом пространстве, используя ИИ, код, исследование и быстрое прототипирование.",
         step4_title: "Презентуйте жюри",
         step4_text: "Финальные проекты представляются жюри, а команда-победитель получает приз.",
 
