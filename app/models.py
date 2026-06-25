@@ -9,11 +9,11 @@ from pydantic import BaseModel, EmailStr, field_validator
 class EntrepreneurApplication(BaseModel):
     """Model for entrepreneur application form."""
     full_name: str
-    email: EmailStr
+    email: Optional[EmailStr] = None
     phone: str
-    company: str
+    company: Optional[str] = None
     project_idea: Optional[str] = None
-    participation_type: Literal["entrepreneur_250", "patron_500"]
+    participation_type: Literal["entrepreneur_250", "patron_500"] = "entrepreneur_250"
     consent_to_contact: bool
     language: Literal["en", "ru"] = "en"
 
@@ -33,10 +33,10 @@ class EntrepreneurApplication(BaseModel):
 
     @field_validator("company")
     @classmethod
-    def validate_company(cls, v: str) -> str:
-        if not v or not v.strip():
-            raise ValueError("Company is required")
-        return v.strip()
+    def validate_company(cls, v: Optional[str]) -> Optional[str]:
+        if v:
+            return v.strip()
+        return v
 
     @field_validator("consent_to_contact")
     @classmethod

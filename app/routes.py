@@ -41,9 +41,9 @@ async def apply_entrepreneur(application: EntrepreneurApplication):
     logger.info("NEW ENTREPRENEUR APPLICATION")
     logger.info("=" * 60)
     logger.info(f"Full Name: {application.full_name}")
-    logger.info(f"Email: {application.email}")
+    logger.info(f"Email: {application.email or 'Not provided'}")
     logger.info(f"Phone: {application.phone}")
-    logger.info(f"Company: {application.company}")
+    logger.info(f"Company: {application.company or 'Not provided'}")
     logger.info(f"Project Idea: {application.project_idea or 'Not provided'}")
     logger.info(f"Participation Type: {application.participation_type}")
     logger.info(f"Contribution Amount: {contribution_amount} EUR")
@@ -55,7 +55,7 @@ async def apply_entrepreneur(application: EntrepreneurApplication):
     success = await send_to_google_sheets("entrepreneur", payload)
     
     if not success:
-        logger.error(f"Failed to send entrepreneur application to Google Sheets: {application.email}")
+        logger.error(f"Failed to send entrepreneur application to Google Sheets: {application.full_name} ({application.phone})")
         return ApplicationResponse(
             success=False,
             message=MESSAGES[lang]["submission_error"]

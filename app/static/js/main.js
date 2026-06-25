@@ -70,6 +70,19 @@
                 language: formData.get('language') || window.i18n?.getCurrentLanguage() || 'en'
             };
             
+            // Add optional fields only if they exist in the form
+            const email = formData.get('email');
+            if (email) data.email = email;
+            
+            const company = formData.get('company');
+            if (company) data.company = company;
+            
+            const projectIdea = formData.get('project_idea');
+            if (projectIdea) data.project_idea = projectIdea;
+            
+            const participationType = formData.get('participation_type');
+            if (participationType) data.participation_type = participationType;
+            
             await submitForm(form, '/api/apply/entrepreneur', data);
         });
     }
@@ -82,24 +95,40 @@
         const lang = window.i18n?.getCurrentLanguage() || 'en';
         
         const fullName = form.querySelector('[name="full_name"]');
+        const email = form.querySelector('[name="email"]');
         const phone = form.querySelector('[name="phone"]');
+        const company = form.querySelector('[name="company"]');
         const consent = form.querySelector('[name="consent_to_contact"]');
 
-        if (!fullName.value.trim()) {
+        if (fullName && !fullName.value.trim()) {
             errors.push({
                 field: fullName,
                 message: window.i18n?.t('error_required', lang) || 'This field is required'
             });
         }
 
-        if (!phone.value.trim()) {
+        if (email && email.value.trim() && !isValidEmail(email.value)) {
+            errors.push({
+                field: email,
+                message: window.i18n?.t('error_email', lang) || 'Please enter a valid email'
+            });
+        }
+
+        if (phone && !phone.value.trim()) {
             errors.push({
                 field: phone,
                 message: window.i18n?.t('error_required', lang) || 'This field is required'
             });
         }
 
-        if (!consent.checked) {
+        if (company && company.hasAttribute('required') && !company.value.trim()) {
+            errors.push({
+                field: company,
+                message: window.i18n?.t('error_required', lang) || 'This field is required'
+            });
+        }
+
+        if (consent && !consent.checked) {
             errors.push({ 
                 field: form.querySelector('.consent-error'), 
                 isConsent: true,
