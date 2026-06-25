@@ -8,7 +8,8 @@ const TRANSLATIONS = {
         // Hero Section
         hero_badge: "Open Beta. Early Access · July 11–12",
         hero_title: "Build what you wanted to build with AI — but were afraid to start",
-        hero_subtitle: "For a day and a half you build a prototype of your own project alongside super-smart teenagers who live and breathe AI — and you yourself, in turbo mode, cross several thresholds in mastering it.",
+        hero_subtitle: "For a day and a half you build a prototype of your own project alongside super-smart teenagers who live and breathe AI.",
+        hero_subtitle_bold: "And you yourself, in turbo mode, cross several thresholds in mastering it.",
         hero_meta: "4–6 entrepreneurs · AI-native teenagers · one room · real projects · 1.5 days and one non-stop building night",
         hero_facts: "📅 July 11–12 · 📍 Limassol · 👥 only 6 seats · ⏱ 1.5 days · 💶 €250",
         cta_apply: "Apply as an Entrepreneur",
@@ -163,7 +164,8 @@ const TRANSLATIONS = {
         // Hero Section
         hero_badge: "Open Beta. Early Access · 11–12 июля",
         hero_title: "Сделайте то, что ХОТЕЛИ, но боялись сделать с ИИ",
-        hero_subtitle: "Полтора дня вы собираете прототип своего проекта рядом с супер-умными подростками, для которых ИИ — родная стихия. И сами, в турбо-режиме, проходите несколько порогов в его освоении.",
+        hero_subtitle: "Полтора дня вы собираете прототип своего проекта рядом с супер-умными подростками, для которых ИИ — родная стихия.",
+        hero_subtitle_bold: "И сами, в турбо-режиме, проходите несколько порогов в его освоении.",
         hero_meta: "4–6 предпринимателей · AI-native подростки · одна комната · реальные проекты · полтора дня и ночь non-stop сборки",
         hero_facts: "📅 11–12 июля · 📍 Лимассол · 👥 всего 6 мест · ⏱ 1.5 дня · 💶 250 €",
         cta_apply: "Подать заявку предпринимателя",
