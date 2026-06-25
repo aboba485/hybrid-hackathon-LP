@@ -1050,6 +1050,7 @@ h1, h2, h3, h4, h5, h6 {
     --color-text-secondary: var(--color-gray-600);
     --color-text-muted: var(--color-gray-500);
     --color-accent: var(--color-black);
+    color: var(--color-text);
 }
 
 /* Primary button on any inverted (white) surface: invert to black-on-white
@@ -1102,6 +1103,7 @@ h1, h2, h3, h4, h5, h6 {
     --color-text: var(--color-black);
     --color-text-secondary: var(--color-gray-700);
     --color-text-muted: var(--color-gray-600);
+    color: var(--color-text);
 }
 
 /* Repeated CTA bands — mid-page nudges that funnel toward the application form. */
