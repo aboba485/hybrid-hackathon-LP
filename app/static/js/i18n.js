@@ -77,7 +77,7 @@ const TRANSLATIONS = {
         step3_title: "Build live",
         step3_text: "On Saturday, July 11, entrepreneurs and students work in teams in one physical space, using AI, code, research, and fast prototyping.",
         step4_title: "Present to the jury",
-        step4_text: "Final projects are presented to the jury, and the winning team receives the prize.",
+        step4_text: "On Sunday afternoon, July 12, final projects are presented to the jury, and the winning team receives the prize.",
 
         // What Can Be Prototyped
         build_title: "What can be prototyped?",
@@ -232,7 +232,7 @@ const TRANSLATIONS = {
         step3_title: "Собирайте вживую",
         step3_text: "В течение субботы 11 июля предприниматели и студенты работают в командах в одном физическом пространстве, используя ИИ, код, исследование и быстрое прототипирование.",
         step4_title: "Презентуйте жюри",
-        step4_text: "Финальные проекты представляются жюри, а команда-победитель получает приз.",
+        step4_text: "Финальные проекты в воскресенье 12 июля днем представляются жюри, а команда-победитель получает приз.",
 
         // What Can Be Prototyped
         build_title: "Что можно прототипировать?",
