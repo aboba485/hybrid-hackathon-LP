@@ -775,6 +775,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
 }
 
+.person-desc a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* --------------------------------------------------------------------------
    Form Section
    -------------------------------------------------------------------------- */

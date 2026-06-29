@@ -115,7 +115,8 @@ const TRANSLATIONS = {
         // Jury and Mentors
         jury_title: "Jury and mentors",
         jury_kirill_name: "Kirill Krinkin",
-        jury_kirill_desc: "JetBrains Research · AI & robotics · Computer Science Center lecturer.",
+        jury_kirill_jass: "Director of JASS",
+        jury_kirill_desc: "professor at Constructor & Neapolis University · ex-JetBrains Research",
         jury_evgeny_name: "Evgeny Tarasov",
         jury_evgeny_desc: "Founder of Basium — a platform for launching online businesses.",
         jury_claude_name: "Claude.ai",
@@ -271,7 +272,8 @@ const TRANSLATIONS = {
         // Jury and Mentors
         jury_title: "Жюри и менторы",
         jury_kirill_name: "Кирилл Кринкин",
-        jury_kirill_desc: "JetBrains Research · ИИ и робототехника · преподаватель Computer Science Center.",
+        jury_kirill_jass: "Директор JASS",
+        jury_kirill_desc: "профессор Constructor и Neapolis University · ex-JetBrains Research",
         jury_evgeny_name: "Евгений Тарасов",
         jury_evgeny_desc: "Основатель Basium — платформы для запуска онлайн-бизнеса.",
         jury_claude_name: "Claude.ai",
