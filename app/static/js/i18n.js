@@ -125,7 +125,7 @@ const TRANSLATIONS = {
         // Project Moderators
         moderators_title: "Project moderators",
         mod_timur_name: "Timur Atnashev, PhD",
-        mod_timur_desc: "Co-founder of MetaGames Lab · business tracker.",
+        mod_timur_desc: "Co-founder of MetaGames Lab · business strategy specialist.",
         mod_ekaterina_name: "Ekaterina Astafieva",
         mod_ekaterina_desc: "Corporate relations expert · ex-Abbott, Roche, inDrive, Amgen.",
 
@@ -282,7 +282,7 @@ const TRANSLATIONS = {
         // Project Moderators
         moderators_title: "Модераторы проекта",
         mod_timur_name: "Тимур Атнашев, PhD",
-        mod_timur_desc: "Со-основатель MetaGames Lab · бизнес-трекер.",
+        mod_timur_desc: "Со-основатель MetaGames Lab · специалист по стратегии бизнеса.",
         mod_ekaterina_name: "Екатерина Астафьева",
         mod_ekaterina_desc: "Эксперт по корпоративным отношениям · ex-Abbott, Roche, inDrive, Amgen.",
 
