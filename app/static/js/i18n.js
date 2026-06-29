@@ -126,7 +126,7 @@ const TRANSLATIONS = {
         mod_timur_name: "Timur Atnashev, PhD",
         mod_timur_desc: "Co-founder of MetaGames Lab · business tracker.",
         mod_ekaterina_name: "Ekaterina Astafieva",
-        mod_ekaterina_desc: "Leading GR specialist · InDrive / La Roche.",
+        mod_ekaterina_desc: "Corporate relations expert · ex-Abbott, Roche, inDrive, Amgen.",
 
         // Form
         form_title: "Apply as an Entrepreneur",
@@ -282,7 +282,7 @@ const TRANSLATIONS = {
         mod_timur_name: "Тимур Атнашев, PhD",
         mod_timur_desc: "Со-основатель MetaGames Lab · бизнес-трекер.",
         mod_ekaterina_name: "Екатерина Астафьева",
-        mod_ekaterina_desc: "Ведущий специалист по GR · InDrive / La Roche.",
+        mod_ekaterina_desc: "Эксперт по корпоративным отношениям · ex-Abbott, Roche, inDrive, Amgen.",
 
         // Form
         form_title: "Подать заявку предпринимателя",
